@@ -1,0 +1,32 @@
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Controles\obj\Debug\Controles.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Controles\bin\Debug\Controles.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Controles\bin\Debug\Controles.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Controles\obj\Debug\Controles.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Controles\obj\Debug\Controles.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Controles\obj\Debug\Controles.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\bin\Debug\Controles.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\bin\Debug\Controles.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.pdb

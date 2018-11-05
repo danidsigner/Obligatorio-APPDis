@@ -1,0 +1,41 @@
+﻿body 
+{
+    background-color: #EAC026;
+}
+
+.Botones
+{
+    background-color: Black;
+    color: #FF9900;
+    border-bottom-style: solid;
+}
+
+.Botones:hover
+{
+    background-color: yellow;
+}
+.Forms
+{
+    margin: 50px auto;
+    width: 874px;
+}
+
+.pnlRepeater
+{
+    width: 750px;    
+}
+
+.UControl
+{
+    width: 900px;
+    border: solid 1px;
+    margin-top:auto;
+    margin-bottom:auto;  
+}
+
+.caja
+{
+    height:100%;
+    margin-top: 200px;
+    position: absolute;    
+}

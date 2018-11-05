@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode url="" title="Menú" description="MenúNavegación">
+    <siteMapNode url="ABMEmpleado.aspx" title="Empleados" description="ABM Empleados">
+    </siteMapNode>
+
+    <siteMapNode url="ABMCompanias.aspx" title="Companias" description="ABM Companias">
+    </siteMapNode>
+
+    <siteMapNode url="ABMTerminal.aspx" title="Terminales" description="ABM Terminales">
+    </siteMapNode>
+
+    <siteMapNode url="" title="Viajes" description="ABM Viajes">
+      <siteMapNode url="ABMViajesNacionales.aspx" title="Nacionales"  description="Nacionales" />
+      <siteMapNode url="ABMViajesInternacionales.aspx" title="Internacionales"  description="Internacionales" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

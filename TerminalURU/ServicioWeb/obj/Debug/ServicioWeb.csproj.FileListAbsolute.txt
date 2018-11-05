@@ -1,0 +1,11 @@
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\ServicioWeb.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\ServicioWeb.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\Logica.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\Logica.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\bin\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\obj\Debug\ServicioWeb.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\obj\Debug\ServicioWeb.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ServicioWeb\obj\Debug\ServicioWeb.csprojResolveAssemblyReference.cache

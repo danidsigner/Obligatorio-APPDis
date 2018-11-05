@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/ServicioWeb" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Logica.dll" publishTime="10/28/2018 20:28:53" />
+    <file relUrl="bin/Persistencia.dll" publishTime="10/28/2018 20:28:52" />
+    <file relUrl="bin/EntidadesCompartidas.pdb" publishTime="10/28/2018 20:28:52" />
+    <file relUrl="bin/EntidadesCompartidas.dll" publishTime="10/28/2018 20:28:52" />
+    <file relUrl="Web.config" publishTime="10/28/2018 21:02:44" />
+    <file relUrl="WebService.asmx" publishTime="10/12/2018 16:36:39" />
+    <file relUrl="bin/Logica.pdb" publishTime="10/28/2018 20:28:53" />
+    <file relUrl="bin/ServicioWeb.dll" publishTime="10/28/2018 21:02:41" />
+    <file relUrl="bin/Persistencia.pdb" publishTime="10/28/2018 20:28:52" />
+    <file relUrl="bin/ServicioWeb.pdb" publishTime="10/28/2018 21:02:41" />
+  </publishProfile>
+</publishData>

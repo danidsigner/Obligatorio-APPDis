@@ -1,0 +1,91 @@
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\obligatorio\Obligatorio-2018 ultimo\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Persistencia\obj\Debug\Persistencia.pdb

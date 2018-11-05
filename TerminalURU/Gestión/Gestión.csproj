@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{84510F4E-2093-4C5B-8CA4-3B2025826773}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gestión</RootNamespace>
+    <AssemblyName>Gestión</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABMCompañia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMCompañia.Designer.cs">
+      <DependentUpon>ABMCompañia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMEmpleado.Designer.cs">
+      <DependentUpon>ABMEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logueo.Designer.cs">
+      <DependentUpon>Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ABMTerminal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMTerminal.Designer.cs">
+      <DependentUpon>ABMTerminal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViajesInternacionalesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViajesInternacionalesFrm.Designer.cs">
+      <DependentUpon>ViajesInternacionalesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViajesNacionalesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViajesNacionalesFrm.Designer.cs">
+      <DependentUpon>ViajesNacionalesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicioWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ABMCompañia.resx">
+      <DependentUpon>ABMCompañia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMEmpleado.resx">
+      <DependentUpon>ABMEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logueo.resx">
+      <DependentUpon>Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ABMTerminal.resx">
+      <DependentUpon>ABMTerminal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViajesInternacionalesFrm.resx">
+      <DependentUpon>ViajesInternacionalesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViajesNacionalesFrm.resx">
+      <DependentUpon>ViajesNacionalesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\ServicioWeb\Compania.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWeb\Empleado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWeb\Internacionales.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWeb\Nacionales.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicioWeb\Terminal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWeb\Viajes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioWeb\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\cancelar.png" />
+    <Content Include="Imagenes\eliminar.png" />
+    <Content Include="Imagenes\libro.bmp" />
+    <Content Include="Imagenes\libro.gif" />
+    <Content Include="Imagenes\modificar.bmp" />
+    <Content Include="Imagenes\nuevo.bmp" />
+    <None Include="Web References\ServicioWeb\WebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CControl\CControl.csproj">
+      <Project>{6B2B3B21-B16D-4176-8ADD-4B3BE701449C}</Project>
+      <Name>CControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/ServicioWeb/WebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioWeb\</RelPath>
+      <UpdateFromURL>http://localhost/ServicioWeb/WebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Gestión_ServicioWeb_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,44 @@
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Downloads\Obligatorio 2018(1)\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio 2018\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\brian\Desktop\NUEVO Obligatorio 2018 html\Obligatorio 2018\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+O:\bios segundo\obligatorios\1 - terminal bus\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb

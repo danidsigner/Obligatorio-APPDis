@@ -1,0 +1,59 @@
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\Gestión.exe
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\Gestión.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMCompañia.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMEmpleado.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.CCLogeo.CCLogueocs.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.Properties.Resources.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.exe
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\EntidadesCompartidas.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\Logica.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\Persistencia.dll
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\Logica.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\bin\Debug\Persistencia.pdb
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.Logueo.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMTerminal.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.ViajesInternacionalesFrm.resources
+C:\Users\usuario\Desktop\1 - terminal bus corregido\TerminalURU\Gestión\obj\x86\Debug\Gestión.ViajesNacionalesFrm.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.exe
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.exe
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Gestión.exe
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Gestión.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\EntidadesCompartidas.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Logica.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Persistencia.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Persistencia.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Logica.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMCompañia.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMEmpleado.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.Logueo.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.Properties.Resources.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMTerminal.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ViajesInternacionalesFrm.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ViajesNacionalesFrm.resources
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMCompañia.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMEmpleado.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.Properties.Resources.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ABMTerminal.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ViajesInternacionalesFrm.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.ViajesNacionalesFrm.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Gestión.exe
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Gestión.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.Logueo.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\CControl.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\CControl.pdb
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\CControl.dll
+C:\Users\Administrador\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\CControl.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.Menu.resources
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\bin\Debug\Gestión.exe.config
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Gestión\obj\x86\Debug\Gestión.Estadisticas.resources

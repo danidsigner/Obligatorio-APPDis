@@ -1,0 +1,4 @@
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ControlesDeUsuario\bin\Debug\ControlesDeUsuario.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ControlesDeUsuario\bin\Debug\ControlesDeUsuario.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ControlesDeUsuario\obj\Debug\ControlesDeUsuario.dll
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\ControlesDeUsuario\obj\Debug\ControlesDeUsuario.pdb
