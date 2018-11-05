@@ -25,6 +25,7 @@ namespace Gestión
             empLogueado = emp;
         }
         //comentario para ver cambios de github
+	//comentario git biran
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
