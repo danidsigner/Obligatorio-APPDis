@@ -24,11 +24,14 @@ namespace Gestión
             InitializeComponent();
             empLogueado = emp;
         }
-<<<<<<< HEAD
-=======
-        //comentario para ver cambios de github
-	//comentario git biran
->>>>>>> e9f74fb388a265fcb1878c31b2187d6c5b82c98e
+
+        // probando una rama aparte para volver a los cambios anteriores luego
+        //
+        //
+        //
+
+
+
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
