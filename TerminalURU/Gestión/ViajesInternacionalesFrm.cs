@@ -24,6 +24,10 @@ namespace Gestión
             InitializeComponent();
             empLogueado = emp;
         }
+<<<<<<< HEAD
+=======
+        //comentario para ver cambios de github
+>>>>>>> parent of e9f74fb... comit de prueba
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
