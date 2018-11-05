@@ -25,9 +25,20 @@ namespace Gestión
             empLogueado = emp;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //comentario para ver cambios de github
 >>>>>>> parent of e9f74fb... comit de prueba
+=======
+
+        // probando una rama aparte para volver a los cambios anteriores luego
+        //
+        //
+        //
+
+
+
+>>>>>>> branch-2
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
