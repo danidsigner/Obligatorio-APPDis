@@ -24,8 +24,12 @@ namespace Gestión
             InitializeComponent();
             empLogueado = emp;
         }
+<<<<<<< HEAD
         //comentario para ver cambios de github
 	//comentario git biran
+=======
+        //github
+>>>>>>> parent of 5eb8830... segundo commit
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
