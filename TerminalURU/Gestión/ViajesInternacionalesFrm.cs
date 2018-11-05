@@ -24,7 +24,7 @@ namespace Gestión
             InitializeComponent();
             empLogueado = emp;
         }
-
+        //github
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
