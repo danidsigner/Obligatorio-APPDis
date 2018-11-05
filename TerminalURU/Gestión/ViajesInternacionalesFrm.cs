@@ -26,6 +26,7 @@ namespace Gestión
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //comentario para ver cambios de github
 >>>>>>> parent of e9f74fb... comit de prueba
@@ -39,6 +40,10 @@ namespace Gestión
 
 
 >>>>>>> branch-2
+=======
+        //comentario para ver cambios de github
+	//comentario git biran
+>>>>>>> parent of b3e6962... Revert "segundo commit"
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try
