@@ -104,5 +104,20 @@ namespace Gestión
         {
             CargarGrilla();
         }
+
+        private void btnViajesAño_Click(object sender, EventArgs e)
+        {
+            XElement xel = XElement.Parse(datos);
+
+            var resultado = (from unNodo in xel.Descendants("Viaje")
+                             group unNodo by unNodo.Element("Compania").Value into grupo
+                             select new
+                             {
+                                 compañia = grupo.Key,
+                                 año = (Convert.ToDateTime((string)grupo.First().Element("FechaPartida")).Year).ToString()
+                             }).ToList();
+
+            dgvViajes.DataSource = resultado;
+        }
     }
 }

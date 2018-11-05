@@ -24,32 +24,7 @@ namespace Gestión
             InitializeComponent();
             empLogueado = emp;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        //comentario para ver cambios de github
->>>>>>> parent of e9f74fb... comit de prueba
-=======
 
-        // probando una rama aparte para volver a los cambios anteriores luego
-        //
-        //
-        //
-
-
-
->>>>>>> branch-2
-=======
-        //comentario para ver cambios de github
-	//comentario git biran
->>>>>>> parent of b3e6962... Revert "segundo commit"
-=======
-=======
-        //comentario para ver cambios de github
->>>>>>> parent of e9f74fb... comit de prueba
->>>>>>> parent of 931872b... Merge branch 'branch-2'
         private void ViajesInternacionales_Load(object sender, EventArgs e)
         {
             try

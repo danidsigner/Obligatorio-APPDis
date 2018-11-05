@@ -35,6 +35,7 @@
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.dgvViajes = new System.Windows.Forms.DataGridView();
             this.btnFiltrarPais = new System.Windows.Forms.Button();
+            this.btnViajesAño = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,11 +99,22 @@
             this.btnFiltrarPais.UseVisualStyleBackColor = true;
             this.btnFiltrarPais.Click += new System.EventHandler(this.btnFiltrarPais_Click);
             // 
+            // btnViajesAño
+            // 
+            this.btnViajesAño.Location = new System.Drawing.Point(81, 236);
+            this.btnViajesAño.Name = "btnViajesAño";
+            this.btnViajesAño.Size = new System.Drawing.Size(151, 23);
+            this.btnViajesAño.TabIndex = 8;
+            this.btnViajesAño.Text = "Cantidad de viajes por año";
+            this.btnViajesAño.UseVisualStyleBackColor = true;
+            this.btnViajesAño.Click += new System.EventHandler(this.btnViajesAño_Click);
+            // 
             // Estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 421);
+            this.Controls.Add(this.btnViajesAño);
             this.Controls.Add(this.btnFiltrarPais);
             this.Controls.Add(this.dgvViajes);
             this.Controls.Add(this.btnFiltrar);
@@ -127,5 +139,6 @@
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.DataGridView dgvViajes;
         private System.Windows.Forms.Button btnFiltrarPais;
+        private System.Windows.Forms.Button btnViajesAño;
     }
 }
