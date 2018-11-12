@@ -721,6 +721,7 @@ go
 exec AltaFacilidad 'WYZ','Telefonía'
 go
 
+
 exec AltaViajeInternacional 332,5,'20181026 10:00 AM','20181026 11:30 AM',46281426,'ABC','Copsa',1,'CI vigente'
 go
 exec AltaViajeInternacional 333,1,'20181028 8:00 PM','20181030 10:00 PM',53272348,'DEF','Cutsa',0,'CI vigente'
@@ -736,6 +737,10 @@ go
 exec AltaViajeNacional 338,2,'20181125 5:00 PM','20181126 5:30 PM',47290843,'WYZ','Rutas del sol',1
 go
 exec AltaViajeNacional 339,2,'20181025 5:00 PM','20181026 5:30 PM',47290843,'DEF','Rutas del sol',1
+go
+exec AltaViajeNacional 340,2,'20191025 5:00 PM','20191026 5:30 PM',47290843,'DEF','Rutas del sol',1
+go
+exec AltaViajeNacional 341,2,'20181228 9:00 PM','20181229 11:30 PM',47290843,'WYZ','Copsa',1
 go
 
 USE master

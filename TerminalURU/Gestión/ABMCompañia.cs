@@ -18,12 +18,12 @@ namespace Gestión
         {
             InitializeComponent();
         }
+
         private void ActivoPorDefecto()
         {
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
-
             txtNombre.Enabled = true;
             txtNombre.Text = "";
             txtDireccion.Text = "";

@@ -149,6 +149,7 @@
             // 
             this.txtContraseña.Location = new System.Drawing.Point(154, 173);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 6;
             this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
@@ -187,7 +188,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "ABMEmpleado";
             this.Text = "ABMEmpleado";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMEmpleado_FormClosing);
             this.Load += new System.EventHandler(this.ABMEmpleado_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

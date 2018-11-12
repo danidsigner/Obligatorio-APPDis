@@ -17,6 +17,7 @@ namespace Gestión
     public partial class Estadisticas : Form
     {
         static WebService WS = new WebService();
+
         string datos = WS.Estadisticas();
 
         public Estadisticas()
@@ -110,11 +111,13 @@ namespace Gestión
             XElement xel = XElement.Parse(datos);
 
             var resultado = (from unNodo in xel.Descendants("Viaje")
-                             group unNodo by unNodo.Element("Compania").Value into grupo
+                             group unNodo by new { unNodo.Element("Compania").Value, Convert.ToDateTime(unNodo.Element("FechaPartida").Value).Year } 
+                             into grupo orderby grupo.Key.Value, grupo.Key.Year
                              select new
                              {
-                                 compañia = grupo.Key,
-                                 año = (Convert.ToDateTime((string)grupo.First().Element("FechaPartida")).Year).ToString()
+                                 compañia = grupo.Key.Value,
+                                 año = grupo.Key.Year.ToString(),
+                                 cantidad = grupo.Count()
                              }).ToList();
 
             dgvViajes.DataSource = resultado;

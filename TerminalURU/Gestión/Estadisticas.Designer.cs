@@ -31,11 +31,11 @@
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.btnLimpiarFiltros = new System.Windows.Forms.Button();
-            this.cbPaises = new System.Windows.Forms.ComboBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.dgvViajes = new System.Windows.Forms.DataGridView();
             this.btnFiltrarPais = new System.Windows.Forms.Button();
             this.btnViajesAño = new System.Windows.Forms.Button();
+            this.cbPaises = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,14 +63,6 @@
             this.btnLimpiarFiltros.UseVisualStyleBackColor = true;
             this.btnLimpiarFiltros.Click += new System.EventHandler(this.btnLimpiarFiltros_Click);
             // 
-            // cbPaises
-            // 
-            this.cbPaises.FormattingEnabled = true;
-            this.cbPaises.Location = new System.Drawing.Point(13, 182);
-            this.cbPaises.Name = "cbPaises";
-            this.cbPaises.Size = new System.Drawing.Size(121, 21);
-            this.cbPaises.TabIndex = 4;
-            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Location = new System.Drawing.Point(248, 135);
@@ -86,7 +78,7 @@
             this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViajes.Location = new System.Drawing.Point(405, 12);
             this.dgvViajes.Name = "dgvViajes";
-            this.dgvViajes.Size = new System.Drawing.Size(417, 323);
+            this.dgvViajes.Size = new System.Drawing.Size(715, 323);
             this.dgvViajes.TabIndex = 6;
             // 
             // btnFiltrarPais
@@ -109,16 +101,24 @@
             this.btnViajesAño.UseVisualStyleBackColor = true;
             this.btnViajesAño.Click += new System.EventHandler(this.btnViajesAño_Click);
             // 
+            // cbPaises
+            // 
+            this.cbPaises.FormattingEnabled = true;
+            this.cbPaises.Location = new System.Drawing.Point(13, 183);
+            this.cbPaises.Name = "cbPaises";
+            this.cbPaises.Size = new System.Drawing.Size(121, 21);
+            this.cbPaises.TabIndex = 9;
+            // 
             // Estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 421);
+            this.ClientSize = new System.Drawing.Size(1132, 421);
+            this.Controls.Add(this.cbPaises);
             this.Controls.Add(this.btnViajesAño);
             this.Controls.Add(this.btnFiltrarPais);
             this.Controls.Add(this.dgvViajes);
             this.Controls.Add(this.btnFiltrar);
-            this.Controls.Add(this.cbPaises);
             this.Controls.Add(this.btnLimpiarFiltros);
             this.Controls.Add(this.dtpFinal);
             this.Controls.Add(this.dtpInicio);
@@ -135,10 +135,10 @@
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFinal;
         private System.Windows.Forms.Button btnLimpiarFiltros;
-        private System.Windows.Forms.ComboBox cbPaises;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.DataGridView dgvViajes;
         private System.Windows.Forms.Button btnFiltrarPais;
         private System.Windows.Forms.Button btnViajesAño;
+        private System.Windows.Forms.ComboBox cbPaises;
     }
 }

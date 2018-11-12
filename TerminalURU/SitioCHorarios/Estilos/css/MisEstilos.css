@@ -27,8 +27,10 @@
 
 .UControl
 {
-    width: 900px;
-    border: solid 1px;
+    border-style: solid;
+    border-color: inherit;
+    border-width: 1px;
+width: 1000px;
     margin-top:auto;
     margin-bottom:auto;  
 }

@@ -12,6 +12,7 @@ namespace Gestión
 {
     public partial class Logueo : Form
     {
+        public Menu MenuFrm = null;
         public Logueo()
         {
             InitializeComponent(); 
@@ -32,7 +33,7 @@ namespace Gestión
                 //
                 //recordar quitar el user por defecto  ↓
                 //
-
+                //usuario manual
                 emp = WS.Logeo(53272348,"manya1");
                 if (emp == null)
                 {
@@ -41,10 +42,12 @@ namespace Gestión
                 else
                 {
                     lblError.Text = "";
-                    Menu MenuFrm = new Menu(emp);
+                    MenuFrm = new Menu(emp);
                     MenuFrm.Show();
                     this.Hide();
                 }
+
+                //fin usuario manual
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {

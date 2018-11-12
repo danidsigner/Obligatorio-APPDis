@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EntidadesCompartidas;
+
+using ServicioWeb;
 
 public partial class ConsultaIndividualDelViaje : System.Web.UI.UserControl
 {

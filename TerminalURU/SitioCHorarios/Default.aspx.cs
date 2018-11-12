@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EntidadesCompartidas;
-using Logica;
+
+using ServicioWeb;
 
 public partial class ConsultaViajes : System.Web.UI.Page
 {
@@ -16,8 +16,9 @@ public partial class ConsultaViajes : System.Web.UI.Page
             try
             {
                 Session["viajeElegido"] = null;
+                WebService WS = new WebService();
+                List<Viajes> v = WS.ListarViajes().ToList();
 
-                List<Viajes> v = FabricaLogica.GetLogicaViajes().ListarViajes();
                 RepeaterCViajes.DataSource = v;
                 RepeaterCViajes.DataBind();
 

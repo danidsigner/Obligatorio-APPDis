@@ -149,6 +149,24 @@ namespace Gestión
             {
                 WebService WS = new WebService();
                 WS.BajaEmpleado(objEmpleado);
+                if (objEmpleado.ci == empLogueado.ci)
+                {
+                    List<Form> LFA = new List<Form>();
+                    LFA.Clear();
+                    foreach (Form FRM in Application.OpenForms)
+                    {
+                        LFA.Add(FRM);
+                    }
+                    for (int X = 0; (X <= (LFA.Count - 1)); X++)
+                    {
+                        if (LFA[X].Name == "Logueo")
+                            LFA[X].Show();
+                        else
+                            LFA[X].Close();
+                    }
+
+                    empLogueado = null;
+                }
 
                 lblError.Text = "Baja con éxito.";
             }
@@ -165,11 +183,6 @@ namespace Gestión
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.ActivoPorDefecto();
-        }
-
-        private void ABMEmpleado_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
         }
     }
 }
