@@ -15,7 +15,8 @@ namespace Gestión
         public Menu MenuFrm = null;
         public Logueo()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Logueo_Load(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace Gestión
         public ABMTerminal()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Terminal_Load(object sender, EventArgs e)
@@ -34,7 +35,8 @@ namespace Gestión
             txtCiudad.Text = "";
             txtPais.Text = "";
             txtFacilidad.Text = "";
-            lbFacilidades.DataSource = null;
+            txtCodigo.Focus();
+            lbFacilidades.Items.Clear();
         }
 
         private void ActivoActualizacion()
@@ -42,11 +44,15 @@ namespace Gestión
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
+            lblError.Text = "";
 
             txtCodigo.Enabled = false;
             txtCiudad.Text = objTerminal.ciudad;
             txtPais.Text = objTerminal.pais;
-            lbFacilidades.DataSource = objTerminal.facilidades;
+            foreach (string f in objTerminal.facilidades)
+            {
+                lbFacilidades.Items.Add(f);
+            }
         }
 
         private void ActivoAgregar()
@@ -64,23 +70,23 @@ namespace Gestión
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            List<string> lista = new List<string>();
+            foreach (string f in lbFacilidades.Items)
+            {
+                lista.Add(f);
+            }
+            WebService WS = new WebService();
+            objTerminal = new Terminal();
+            objTerminal.codigo = txtCodigo.Text.ToUpper().Trim();
+            objTerminal.ciudad = txtCiudad.Text;
+            objTerminal.pais = txtPais.Text;
+            objTerminal.facilidades = lista.ToArray();
             try
             {
-                List<string> lista = new List<string>();
-                foreach (string f in lbFacilidades.Items)
-                {
-                    lista.Add(f);
-                }
-                WebService WS = new WebService();
-                objTerminal = new Terminal();
-                objTerminal.codigo = txtCodigo.Text;
-                objTerminal.ciudad = txtCiudad.Text;
-                objTerminal.pais = txtPais.Text;
-                objTerminal.facilidades = lista.ToArray();
-
                 WS.AltaTerminal(objTerminal);
 
                 lblError.Text = "Alta con éxito.";
+                ActivoPorDefecto();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -94,22 +100,21 @@ namespace Gestión
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            WebService WS = new WebService();
+            List<string> lista = new List<string>();
+
+            foreach (string f in lbFacilidades.Items)
+            { lista.Add(f); }
+
+            objTerminal.ciudad = txtCiudad.Text;
+            objTerminal.pais = txtPais.Text;
+            objTerminal.facilidades = lista.ToArray();
             try
             {
-                List<string> lista = new List<string>();
-                foreach (string f in lbFacilidades.Items)
-                {
-                    lista.Add(f);
-                }
-                WebService WS = new WebService();
-                objTerminal.codigo = txtCodigo.Text;
-                objTerminal.ciudad = txtCiudad.Text;
-                objTerminal.pais = txtPais.Text;
-                objTerminal.facilidades = lista.ToArray();
-
                 WS.ModificarTerminal(objTerminal);
 
                 lblError.Text = "Modificación con éxito.";
+                ActivoPorDefecto();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -182,10 +187,35 @@ namespace Gestión
         {
             try
             {
-                lbFacilidades.Items.Remove(lbFacilidades.SelectedItem);
+                lbFacilidades.Items.RemoveAt(lbFacilidades.SelectedIndex);
             }
             catch (Exception ex)
             { lblError.Text = ex.Message; }
+        }
+
+        private void txtCodigo_Validating(object sender, CancelEventArgs e)
+        {
+            WebService WS = new WebService();
+            try
+            {
+                objTerminal = WS.BuscarTerminalActiva(txtCodigo.Text);
+                if (objTerminal != null)
+                {
+                    ActivoActualizacion();
+                }
+                else
+                {
+                    ActivoAgregar();
+                }
+            }
+            catch (System.Web.Services.Protocols.SoapException ex)
+            {
+                lblError.Text = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
         }
     }
 }

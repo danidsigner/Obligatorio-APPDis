@@ -64,9 +64,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblError});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 232);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 579);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(560, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(345, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -84,7 +84,7 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(560, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(345, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -130,29 +130,30 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(77, 46);
+            this.txtCodigo.Location = new System.Drawing.Point(143, 69);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(141, 20);
             this.txtCodigo.TabIndex = 2;
+            this.txtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigo_Validating);
             // 
             // txtCiudad
             // 
-            this.txtCiudad.Location = new System.Drawing.Point(77, 85);
+            this.txtCiudad.Location = new System.Drawing.Point(143, 125);
             this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(100, 20);
+            this.txtCiudad.Size = new System.Drawing.Size(141, 20);
             this.txtCiudad.TabIndex = 3;
             // 
             // txtPais
             // 
-            this.txtPais.Location = new System.Drawing.Point(77, 126);
+            this.txtPais.Location = new System.Drawing.Point(143, 185);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(100, 20);
+            this.txtPais.Size = new System.Drawing.Size(141, 20);
             this.txtPais.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 46);
+            this.label1.Location = new System.Drawing.Point(28, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 5;
@@ -161,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 91);
+            this.label2.Location = new System.Drawing.Point(28, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 6;
@@ -170,7 +171,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 132);
+            this.label3.Location = new System.Drawing.Point(28, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 7;
@@ -183,50 +184,51 @@
             this.groupBox1.Controls.Add(this.btnEliminarFacilidad);
             this.groupBox1.Controls.Add(this.btnAgregarFacilidad);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(214, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 251);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(308, 189);
+            this.groupBox1.Size = new System.Drawing.Size(321, 291);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // lbFacilidades
             // 
             this.lbFacilidades.FormattingEnabled = true;
-            this.lbFacilidades.Location = new System.Drawing.Point(25, 80);
+            this.lbFacilidades.Location = new System.Drawing.Point(25, 160);
             this.lbFacilidades.Name = "lbFacilidades";
             this.lbFacilidades.Size = new System.Drawing.Size(240, 95);
             this.lbFacilidades.TabIndex = 18;
             // 
             // txtFacilidad
             // 
-            this.txtFacilidad.Location = new System.Drawing.Point(70, 4);
+            this.txtFacilidad.Location = new System.Drawing.Point(124, 40);
             this.txtFacilidad.Name = "txtFacilidad";
-            this.txtFacilidad.Size = new System.Drawing.Size(100, 20);
+            this.txtFacilidad.Size = new System.Drawing.Size(141, 20);
             this.txtFacilidad.TabIndex = 17;
             // 
             // btnEliminarFacilidad
             // 
-            this.btnEliminarFacilidad.Location = new System.Drawing.Point(166, 38);
+            this.btnEliminarFacilidad.Location = new System.Drawing.Point(166, 78);
             this.btnEliminarFacilidad.Name = "btnEliminarFacilidad";
             this.btnEliminarFacilidad.Size = new System.Drawing.Size(99, 23);
             this.btnEliminarFacilidad.TabIndex = 16;
             this.btnEliminarFacilidad.Text = "Eliminar Facilidad";
             this.btnEliminarFacilidad.UseVisualStyleBackColor = true;
+            this.btnEliminarFacilidad.Click += new System.EventHandler(this.btnEliminarFacilidad_Click);
             // 
             // btnAgregarFacilidad
             // 
-            this.btnAgregarFacilidad.Location = new System.Drawing.Point(25, 38);
+            this.btnAgregarFacilidad.Location = new System.Drawing.Point(25, 78);
             this.btnAgregarFacilidad.Name = "btnAgregarFacilidad";
             this.btnAgregarFacilidad.Size = new System.Drawing.Size(101, 23);
             this.btnAgregarFacilidad.TabIndex = 15;
             this.btnAgregarFacilidad.Text = "Agregar Facilidad";
             this.btnAgregarFacilidad.UseVisualStyleBackColor = true;
+            this.btnAgregarFacilidad.Click += new System.EventHandler(this.btnAgregarFacilidad_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 7);
+            this.label4.Location = new System.Drawing.Point(22, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 14;
@@ -236,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 254);
+            this.ClientSize = new System.Drawing.Size(345, 601);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

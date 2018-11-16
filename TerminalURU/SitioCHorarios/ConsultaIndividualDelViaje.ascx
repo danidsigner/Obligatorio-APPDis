@@ -47,7 +47,8 @@
 </style>
 <link href="Estilos/css/MisEstilos.css" rel ="Stylesheet" type ="text/css" />
 <div class="caja">
-<table class="UControl">
+<table class="UControl" 
+        style="font-family: 'Segoe UI Emoji'; background-color: #FFFFFF; border-style: solid; border-color: #000000">
     <tr>
         <td class="style2" colspan="2">
             &nbsp;</td>

@@ -407,6 +407,7 @@ begin
 		return -4
 	if exists (select * from Viajes where (DATEDIFF(MINUTE,Partida,@Partida)<120 and CodTerminal = @CodTerminal))
 		return -5
+		
 		begin transaction
 		
 		insert into Viajes values (@Numero,@CantAsientos,@Partida,@Arribo,@CIEmpleado,@CodTerminal,	@NomCompania)
@@ -700,7 +701,7 @@ go
 exec AltaEmpleado 47290843,'Richardt Morales','Bolso2'
 go
 
-
+select * from Empleados
 exec AltaTerminal 'ABC','Canelones','Uruguay'
 go
 exec AltaTerminal 'DEF','Sao Pablo','Brasil'
@@ -721,14 +722,13 @@ go
 exec AltaFacilidad 'WYZ','Telefonía'
 go
 
-
-exec AltaViajeInternacional 332,5,'20181026 10:00 AM','20181026 11:30 AM',46281426,'ABC','Copsa',1,'CI vigente'
+exec AltaViajeInternacional 332,5,'20181126 10:00 AM','20181126 11:30 AM',46281426,'ABC','Copsa',1,'CI vigente'
 go
 exec AltaViajeInternacional 333,1,'20181028 8:00 PM','20181030 10:00 PM',53272348,'DEF','Cutsa',0,'CI vigente'
 go
 exec AltaViajeInternacional 334,2,'20181029 1:00 PM','20181029 2:00 PM',47290843,'WYZ','Rutas del sol',1,'CI vigente'
 go
-exec AltaViajeInternacional 335,2,'20181029 1:00 PM','20181029 2:00 PM',47290843,'WYZ','Copsa',1,'CI vigente'
+exec AltaViajeInternacional 335,2,'20181129 5:00 PM','20181129 8:00 PM',47290843,'WYZ','Copsa',1,'CI vigente'
 go
 exec AltaViajeNacional 336,5,'20191024 5:00 PM','20191025 6:00 PM',46281426,'ABC','Copsa',1
 go
@@ -742,6 +742,8 @@ exec AltaViajeNacional 340,2,'20191025 5:00 PM','20191026 5:30 PM',47290843,'DEF
 go
 exec AltaViajeNacional 341,2,'20181228 9:00 PM','20181229 11:30 PM',47290843,'WYZ','Copsa',1
 go
+exec AltaViajeNacional 346,2,'20191229 4:30 PM','20191229 7:30 PM',46281426,'DEF','Rutas del sol',1
+select * from Viajes
 
 USE master
 GO

@@ -42,3 +42,4 @@ C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\bin
 C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\bin\Debug\EntidadesCompartidas.pdb
 C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.dll
 C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.pdb
+C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\EntidadesCompartidas\obj\Debug\EntidadesCompartidas.csprojResolveAssemblyReference.cache
