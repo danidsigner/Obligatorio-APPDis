@@ -128,12 +128,14 @@ namespace Gestión
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            WebService WS = new WebService();
+
             try
             {
-                WebService WS = new WebService();
                 WS.BajaTerminal(objTerminal);
 
                 lblError.Text = "Baja con éxito.";
+                ActivoPorDefecto();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -195,26 +197,58 @@ namespace Gestión
 
         private void txtCodigo_Validating(object sender, CancelEventArgs e)
         {
-            WebService WS = new WebService();
-            try
+            if (txtCodigo.Text == "" || txtCodigo.Text.Length != 3)
+                errorProvider1.SetError(txtCodigo, lblError.Text = "Ingrese un código valido");
+
+            else
             {
-                objTerminal = WS.BuscarTerminalActiva(txtCodigo.Text);
-                if (objTerminal != null)
+                errorProvider1.Clear();
+                lblError.Text = "";
+                WebService WS = new WebService();
+                try
                 {
-                    ActivoActualizacion();
+                    objTerminal = WS.BuscarTerminalActiva(txtCodigo.Text);
+                    if (objTerminal != null)
+                    {
+                        ActivoActualizacion();
+                    }
+                    else
+                    {
+                        ActivoAgregar();
+                    }
                 }
-                else
+                catch (System.Web.Services.Protocols.SoapException ex)
                 {
-                    ActivoAgregar();
+                    lblError.Text = ex.Message;
+                }
+                catch (Exception ex)
+                {
+                    lblError.Text = ex.Message;
                 }
             }
-            catch (System.Web.Services.Protocols.SoapException ex)
+        }
+
+        private void txtCiudad_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtCiudad.Text == "")
+                errorProvider1.SetError(txtCiudad, lblError.Text = "Debe ingresar una ciudad");
+
+            else
             {
-                lblError.Text = ex.Message;
+                errorProvider1.Clear();
+                lblError.Text = "";
             }
-            catch (Exception ex)
+        }
+
+        private void txtPais_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPais.Text == "")
+                errorProvider1.SetError(txtPais, lblError.Text = "Debe ingresar un país");
+
+            else
             {
-                lblError.Text = ex.Message;
+                errorProvider1.Clear();
+                lblError.Text = "";
             }
         }
     }

@@ -700,8 +700,8 @@ exec AltaEmpleado 53272348,'Paolo Montero','manya1'
 go
 exec AltaEmpleado 47290843,'Richardt Morales','Bolso2'
 go
+select * from Terminales
 
-select * from Empleados
 exec AltaTerminal 'ABC','Canelones','Uruguay'
 go
 exec AltaTerminal 'DEF','Sao Pablo','Brasil'

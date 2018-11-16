@@ -142,6 +142,7 @@
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(141, 20);
             this.txtCiudad.TabIndex = 3;
+            this.txtCiudad.Validating += new System.ComponentModel.CancelEventHandler(this.txtCiudad_Validating);
             // 
             // txtPais
             // 
@@ -149,6 +150,7 @@
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(141, 20);
             this.txtPais.TabIndex = 4;
+            this.txtPais.Validating += new System.ComponentModel.CancelEventHandler(this.txtPais_Validating);
             // 
             // label1
             // 
