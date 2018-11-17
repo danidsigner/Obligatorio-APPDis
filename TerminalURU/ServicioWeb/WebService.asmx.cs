@@ -590,6 +590,8 @@ namespace ServicioWeb
 
         #endregion
 
+
+
         [WebMethod]
         public Internacionales DeclaroVInternacional(Internacionales I) { return I; }
 
