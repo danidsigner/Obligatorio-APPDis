@@ -35,7 +35,7 @@ namespace Gestión
                 //recordar quitar el user por defecto  ↓
                 //
                 //usuario manual
-                emp = WS.Logeo(53272348,"manya1");
+                emp = WS.Logeo(46181064, "pablo1");
                 if (emp == null)
                 {
                     lblError.Text = "Usuario y/o contraseña incorrecto.";

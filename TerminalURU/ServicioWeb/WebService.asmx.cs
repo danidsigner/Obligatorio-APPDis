@@ -274,17 +274,19 @@ namespace ServicioWeb
             }
             catch (Exception ex)
             {
-                XmlDocument _undoc = new XmlDocument();
-                XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
+                //XmlDocument _undoc = new XmlDocument();
+                //XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
 
-                XmlNode _nodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
-                _nodoDetalle.InnerText = ex.Message;
+                //XmlNode _nodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
+                //_nodoDetalle.InnerText = ex.Message;
 
-                _NodoError.AppendChild(_nodoDetalle);
+                //_NodoError.AppendChild(_nodoDetalle);
 
-                SoapException _MiEx = new SoapException(ex.Message, SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
+                //SoapException _MiEx = new SoapException(ex.Message, SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
 
-                throw _MiEx;
+                //throw _MiEx;
+
+                throw TheSoapException(ex);
             }
         }
 
@@ -346,17 +348,7 @@ namespace ServicioWeb
             }
             catch (Exception ex)
             {
-                XmlDocument _undoc = new XmlDocument();
-                XmlNode _NodoError = _undoc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
-
-                XmlNode _nodoDetalle = _undoc.CreateNode(XmlNodeType.Element, "Error", "");
-                _nodoDetalle.InnerText = ex.Message;
-
-                _NodoError.AppendChild(_nodoDetalle);
-
-                SoapException _MiEx = new SoapException(ex.Message, SoapException.ClientFaultCode, Context.Request.Url.AbsoluteUri, _NodoError);
-
-                throw _MiEx;
+                throw TheSoapException(ex);
             }
         }
 
@@ -591,6 +583,33 @@ namespace ServicioWeb
         #endregion
 
 
+        //
+        //
+        //OPERACION DE MANEJO DE SOAPEXCEPTION
+        //
+        //
+
+        internal SoapException TheSoapException(Exception ex)
+        {
+            //XmlDocument _Doc = new XmlDocument();
+            //XmlNode NodoError = _Doc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
+            //XmlNode NodoDetalle = _Doc.CreateNode(XmlNodeType.Element, "Error", "");
+            //NodoDetalle.InnerText = ex.Message;
+
+            //NodoError.AppendChild(NodoDetalle);
+
+            ////SoapException SoapEx = new SoapException(ex.Message, SoapException.ClientFaultCode, Context.Request.Url.AbsolutePath, NodoError);
+            //SoapException SoapEx = new SoapException(ex.Message, SoapException.ClientFaultCode, Context.Request.Url.AbsolutePath, NodoError);
+            XmlDocument doc = new XmlDocument();
+            XmlNode node = doc.CreateNode(XmlNodeType.Element, SoapException.DetailElementName.Name, SoapException.DetailElementName.Namespace);
+            XmlNode child = doc.CreateNode(XmlNodeType.Element, "Error", SoapException.DetailElementName.Namespace);
+            child.InnerText = ex.GetType().ToString();
+            node.AppendChild(child);
+
+            SoapException soapErr = new SoapException(ex.Message,SoapException.ServerFaultCode, Context.Request.Url.AbsoluteUri,node);
+
+            return soapErr;
+        }
 
         [WebMethod]
         public Internacionales DeclaroVInternacional(Internacionales I) { return I; }

@@ -17,34 +17,37 @@ public partial class ConsultaIndividualDelViaje : System.Web.UI.UserControl
             {
                 Viajes v = (Viajes)Session["viajeElegido"];
 
-                lblNumero.Text = "Numero: " + v.numero.ToString();
-                lblPartida.Text = "Partida: " + v.partida.ToString();
-                lblArribo.Text = "Arribo" + v.arribo.ToString();
-                lblCantAsientos.Text = "Cantidad de Asientos: " + v.cantAsientos.ToString();
-                lblEmpleado.Text = "Nombre del Empleado: " + v.e.nombreCompleto;
+                lblNumero.Text = v.numero.ToString();
+                lblPartida.Text = v.partida.ToString();
+                lblArribo.Text = v.arribo.ToString();
+                lblCantAsientos.Text = v.cantAsientos.ToString();
+                lblEmpleado.Text = v.e.nombreCompleto;
 
                 if (v is Internacionales)
                 {
                     Internacionales i = (Internacionales)v;
                     lblDocumentacion.Text = i.documentacion;
                     if (i.servAbordo == true)
-                        lblServAbordo.Text = "Servicio Abordo: Si";
+                        lblServAbordo.Text = "Si";
                     else
-                        lblServAbordo.Text = "Servicio Abordo: No";
+                        lblServAbordo.Text = "No";
+                    lblParadas.Text = "Valór no admitido.";
                 }
                 else
                 {
                     Nacionales n = (Nacionales)v;
-                    lblParadas.Text = "Cantidad de paradas: " + n.paradas.ToString();
+                    lblParadas.Text = n.paradas.ToString();
+                    lblServAbordo.Text = "Valór no admitido.";
+                    lblDocumentacion.Text = "Valór no admitido.";
                 }
 
-                lblNombre.Text = "Nombre: " + v.c.nombre;
-                lblDireccion.Text = "Dirección " + v.c.direccion;
-                lblTelefono.Text = "Teléfono: " + v.c.telefono.ToString();
+                lblNombre.Text = v.c.nombre;
+                lblDireccion.Text = v.c.direccion;
+                lblTelefono.Text = v.c.telefono.ToString();
 
-                lblCodigo.Text = "Código: " + v.t.codigo;
-                lblCiudad.Text = "Ciudad: " + v.t.ciudad;
-                lblPais.Text = "País: " + v.t.pais;
+                lblCodigo.Text = v.t.codigo;
+                lblCiudad.Text = v.t.ciudad;
+                lblPais.Text = v.t.pais;
 
                 GDVFacilidades.DataSource = v.t.facilidades;
                 GDVFacilidades.ShowHeader = false;

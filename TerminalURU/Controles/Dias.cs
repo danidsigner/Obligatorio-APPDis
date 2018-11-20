@@ -14,7 +14,7 @@ namespace Controles
             {
                 this.Items.Add(dias.ToString());
             }
-            DataBind();
+            //DataBind();
         }
 
         public int SelectedDia

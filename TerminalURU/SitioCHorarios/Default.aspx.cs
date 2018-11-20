@@ -47,6 +47,8 @@ public partial class ConsultaViajes : System.Web.UI.Page
                 }
                 DDLDestino.SelectedIndex = -1;
                 DDLCompania.SelectedIndex = -1;
+
+                bloquearFiltros();
             }
             catch (Exception ex)
             {
@@ -78,20 +80,25 @@ public partial class ConsultaViajes : System.Web.UI.Page
         Años1.ClearSelection();
         RepeaterCViajes.DataSource = (List<Viajes>)Session["TodosLosViajes"];
         RepeaterCViajes.DataBind();
+        bloquearFiltros();
     }
     protected void btnFiltro_Click(object sender, EventArgs e)
     {
         try
         {
             List<Viajes> viajes = (List<Viajes>)Session["TodosLosViajes"];
-            DateTime fecha = new DateTime(Años1.SelectedAños, Meses1.SeleccionMes, Dias1.SelectedDia);
+            DateTime fecha = new DateTime(Años1.SelectedAños, Meses1.SeleccionMes, Dias1.SelectedDia, 0, 0, 0);
+            List<Viajes> resultado = new List<Viajes>();
 
-            string a = DDLDestino.SelectedValue.ToString();
-            string c = DDLCompania.SelectedValue.ToString();
-            List<Viajes> resultado = (from v in viajes
-                                      where v.t.codigo.Contains(a) && v.c.nombre.Contains(c) &&
-                                      Convert.ToDateTime(v.partida.ToString("yyyy/MM/dd")) == fecha
-                                      select v).ToList();
+            if (DDLCompania.SelectedIndex != 0)
+            {
+                string a = DDLDestino.SelectedValue.ToString();
+                string c = DDLCompania.SelectedValue.ToString();
+                resultado = (from v in viajes
+                                          where v.t.codigo.Contains(a) && v.c.nombre.Contains(c) &&
+                                          Convert.ToDateTime(v.partida.ToString("yyyy/MM/dd")) == fecha
+                                          select v).ToList(); 
+            }
 
             RepeaterCViajes.DataSource = resultado;
             RepeaterCViajes.DataBind();
@@ -100,5 +107,25 @@ public partial class ConsultaViajes : System.Web.UI.Page
         {
             lblError.Text = ex.Message;
         }
+    }
+    protected void DDLDestino_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (DDLDestino.SelectedIndex != -1)
+        {
+            btnFiltro.Enabled = true;
+            DDLCompania.Enabled = true;
+            Dias1.Enabled = true;
+            Meses1.Enabled = true;
+            Años1.Enabled = true;
+        }
+    }
+
+    public void bloquearFiltros()
+    {
+        btnFiltro.Enabled = false;
+        DDLCompania.Enabled = false;
+        Dias1.Enabled = false;
+        Meses1.Enabled = false;
+        Años1.Enabled = false;
     }
 }

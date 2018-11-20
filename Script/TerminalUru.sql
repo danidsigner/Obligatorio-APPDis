@@ -354,12 +354,6 @@ begin
 
 	else
 		return -2
-	
-	
-	--If @@ERROR = 0
-	--		return 1
-	--	else
-	--		return 0
 end
 go
 
@@ -686,7 +680,8 @@ end
 go
 
 -------------------Registros de prueba----------------------------------------
-
+exec AltaCompania 'EGA','Rio Negro 2030',099665544
+go
 exec AltaCompania 'Rutas del sol','Av Italia 2223',094645567
 go
 exec AltaCompania 'Copsa','Bolivia 1473',098786532
@@ -694,56 +689,112 @@ go
 exec AltaCompania 'Cutsa','Rivera 7240',095324580
 go
 
-exec AltaEmpleado 46281426,'Pablo Javier Bengochea','270665'
+exec AltaEmpleado 46181064,'Pablo Gonzalez','pablo1'
 go
-exec AltaEmpleado 53272348,'Paolo Montero','manya1'
+exec AltaEmpleado 53062247,'Juan Lopez','juan01'
 go
-exec AltaEmpleado 47290843,'Richardt Morales','Bolso2'
-go
-select * from Terminales
-
-exec AltaTerminal 'ABC','Canelones','Uruguay'
-go
-exec AltaTerminal 'DEF','Sao Pablo','Brasil'
-go
-exec AltaTerminal 'WYZ','Buenos Aires','Argentina'
+exec AltaEmpleado 47590802,'Juan Ignacio Rastov','rastov'
 go
 
-exec AltaFacilidad 'ABC','Cambio'
+exec AltaTerminal 'NCU','Canelones','Uruguay'
 go
-exec AltaFacilidad 'ABC','Correo'
+exec AltaTerminal 'NAU','Artigas','Uruguay'
 go
-exec AltaFacilidad 'DEF','Telefonía glll'
+exec AltaTerminal 'NSU','San Jose','Uruguay'
 go
-exec AltaFacilidad 'WYZ','Correo'
-go
-exec AltaFacilidad 'WYZ','Cambio'
-go
-exec AltaFacilidad 'WYZ','Telefonía'
+exec AltaTerminal 'NMU','Montevideo','Uruguay'
 go
 
-exec AltaViajeInternacional 332,5,'20181126 10:00 AM','20181126 11:30 AM',46281426,'ABC','Copsa',1,'CI vigente'
+exec AltaTerminal 'IAP','Asuncion','Paraguay'
 go
-exec AltaViajeInternacional 333,1,'20181028 8:00 PM','20181030 10:00 PM',53272348,'DEF','Cutsa',0,'CI vigente'
+exec AltaTerminal 'ISB','Sao Pablo','Brasil'
 go
-exec AltaViajeInternacional 334,2,'20181029 1:00 PM','20181029 2:00 PM',47290843,'WYZ','Rutas del sol',1,'CI vigente'
+exec AltaTerminal 'IBA','Buenos Aires','Argentina'
 go
-exec AltaViajeInternacional 335,2,'20181129 5:00 PM','20181129 8:00 PM',47290843,'WYZ','Copsa',1,'CI vigente'
+exec AltaTerminal 'ICV','Caracas','Venezuela'
 go
-exec AltaViajeNacional 336,5,'20191024 5:00 PM','20191025 6:00 PM',46281426,'ABC','Copsa',1
+
+exec AltaFacilidad 'NCU','Cambio'
 go
-exec AltaViajeNacional 337,1,'20181030 8:00 AM','20181030 11:00 AM',53272348,'DEF','Cutsa',0
+exec AltaFacilidad 'NCU','Correo'
 go
-exec AltaViajeNacional 338,2,'20181125 5:00 PM','20181126 5:30 PM',47290843,'WYZ','Rutas del sol',1
+exec AltaFacilidad 'NAU','Telefonía'
 go
-exec AltaViajeNacional 339,2,'20181025 5:00 PM','20181026 5:30 PM',47290843,'DEF','Rutas del sol',1
+exec AltaFacilidad 'NSU','Correo'
 go
-exec AltaViajeNacional 340,2,'20191025 5:00 PM','20191026 5:30 PM',47290843,'DEF','Rutas del sol',1
+exec AltaFacilidad 'NMU','Cambio'
 go
-exec AltaViajeNacional 341,2,'20181228 9:00 PM','20181229 11:30 PM',47290843,'WYZ','Copsa',1
+exec AltaFacilidad 'NMU','Telefonía'
 go
-exec AltaViajeNacional 346,2,'20191229 4:30 PM','20191229 7:30 PM',46281426,'DEF','Rutas del sol',1
-select * from Viajes
+exec AltaFacilidad 'NMU','Correo'
+go
+
+exec AltaFacilidad 'IAP','Cambio'
+go
+exec AltaFacilidad 'ISB','Cambio'
+go
+exec AltaFacilidad 'IBA','Cambio'
+go
+exec AltaFacilidad 'ICV','Cambio'
+go
+exec AltaFacilidad 'ICV','Correo'
+go
+exec AltaFacilidad 'IAP','Telefonia'
+go
+exec AltaFacilidad 'ISB','Correo'
+go
+exec AltaFacilidad 'IBA','Telefonia'
+
+
+exec AltaViajeInternacional 100,5,'20190126 10:00 AM','20190129 11:30 AM',46181064,'IAP','EGA',1,'CI vigente'
+go
+exec AltaViajeInternacional 101,1,'20190210 8:00 PM','20190213 10:00 PM',53062247,'IAP','EGA',0,'CI vigente'
+go
+exec AltaViajeInternacional 109,2,'20190317 5:00 AM','20190318 11:00 PM',47590802,'IAP','Rutas del sol',1,'CI vigente'
+go
+exec AltaViajeInternacional 102,2,'20190411 4:00 AM','20190411 8:00 PM',46181064,'ISB','Rutas del sol',1,'CI vigente'
+go
+exec AltaViajeInternacional 103,2,'20190519 5:00 PM','20190521 4:00 AM',53062247,'ISB','EGA',1,'CI vigente'
+go
+exec AltaViajeInternacional 104,4,'20190522 5:00 PM','20190523 3:00 AM',47590802,'IBA','Rutas del sol',1,'CI vigente'
+go
+exec AltaViajeInternacional 105,3,'20190626 1:00 PM','20190627 1:00 AM',46181064,'IBA','EGA',1,'CI vigente'
+go
+exec AltaViajeInternacional 110,10,'20190710 5:00 AM','20190711 2:00 PM',53062247,'IBA','Rutas del sol',1,'CI vigente'
+go
+exec AltaViajeInternacional 106,2,'20190715 2:00 PM','20190718 1:00 AM',47590802,'ICV','EGA',1,'CI vigente'
+go
+exec AltaViajeInternacional 107,8,'20190723 5:00 PM','20190726 8:00 PM',46181064,'ICV','EGA',1,'CI vigente'
+go
+exec AltaViajeInternacional 108,6,'20190811 5:00 AM','20190814 3:00 PM',53062247,'ICV','Rutas del sol',1,'CI vigente'
+go
+
+
+
+exec AltaViajeNacional 200,5,'20190101 5:00 AM','20190101 6:00 PM',46181064,'NCU','Copsa',1
+go
+exec AltaViajeNacional 201,1,'20190110 8:00 AM','20190110 2:00 PM',53062247,'NCU','Cutsa',0
+go
+exec AltaViajeNacional 202,2,'20190215 5:00 AM','20190215 2:30 PM',47590802,'NAU','Cutsa',2
+go
+exec AltaViajeNacional 203,4,'20190217 8:00 AM','20190217 5:30 PM',46181064,'NAU','Cutsa',2
+go
+exec AltaViajeNacional 204,10,'20190222 8:00 PM','20190223 1:45 AM',53062247,'NSU','Cutsa',1
+go
+exec AltaViajeNacional 205,5,'20190311 9:00 AM','20190311 1:30 PM',47590802,'NSU','Copsa',1
+go
+exec AltaViajeNacional 206,2,'20190316 4:30 AM','20190316 11:00 AM',46181064,'NSU','Cutsa',1
+go
+exec AltaViajeNacional 207,9,'20190320 10:00 AM','20190320 3:00 PM',53062247,'NMU','Copsa',1
+go
+exec AltaViajeNacional 208,5,'20190325 10:00 PM','20190326 2:00 AM',47590802,'NMU','Copsa',1
+go
+exec AltaViajeNacional 209,9,'20190401 5:00 PM','20190401 10:00 PM',46181064,'NMU','Copsa',0
+go
+exec AltaViajeNacional 210,5,'20190407 1:00 PM','20190407 6:00 PM',53062247,'NMU','Copsa',0
+go
+
+
 
 USE master
 GO
@@ -758,10 +809,3 @@ CREATE USER [IIS APPPOOL\DefaultAppPool] FOR LOGIN [IIS APPPOOL\DefaultAppPool]
 GO
 
 Grant Execute to [IIS APPPOOL\DefaultAppPool]
-
---select*from Viajes
---select * from Internacionales
---exec BuscarViajeNacional 111
---select * from Companias
---exec BuscarViajeInternacional 332
---exec ModificarViajeInternacional 332,2,'20180826','20180827',46281426,'ABC','Copsa',1,'no lo se rick'

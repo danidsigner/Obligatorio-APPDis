@@ -90,7 +90,7 @@ namespace Gestión
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                lblError.Text = ex.Message;
+                MessageBox.Show(ex.Detail.InnerText);
             }
             catch (Exception ex)
             {

@@ -30,4 +30,3 @@ C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\bin\Debug\Cont
 C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\bin\Debug\Controles.pdb
 C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.dll
 C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.pdb
-C:\Users\usuario\Desktop\Obligatorio APPDis\TerminalURU\Controles\obj\Debug\Controles.csprojResolveAssemblyReference.cache

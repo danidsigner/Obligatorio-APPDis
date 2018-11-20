@@ -276,16 +276,6 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="Viajes" nillable="true" type="tns:Viajes" />
         </s:sequence>
       </s:complexType>
-      <s:element name="ListarViajesTodos">
-        <s:complexType />
-      </s:element>
-      <s:element name="ListarViajesTodosResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ListarViajesTodosResult" type="tns:ArrayOfViajes" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="Estadisticas">
         <s:complexType />
       </s:element>
@@ -465,12 +455,6 @@
   <wsdl:message name="ListarViajesSoapOut">
     <wsdl:part name="parameters" element="tns:ListarViajesResponse" />
   </wsdl:message>
-  <wsdl:message name="ListarViajesTodosSoapIn">
-    <wsdl:part name="parameters" element="tns:ListarViajesTodos" />
-  </wsdl:message>
-  <wsdl:message name="ListarViajesTodosSoapOut">
-    <wsdl:part name="parameters" element="tns:ListarViajesTodosResponse" />
-  </wsdl:message>
   <wsdl:message name="EstadisticasSoapIn">
     <wsdl:part name="parameters" element="tns:Estadisticas" />
   </wsdl:message>
@@ -569,10 +553,6 @@
     <wsdl:operation name="ListarViajes">
       <wsdl:input message="tns:ListarViajesSoapIn" />
       <wsdl:output message="tns:ListarViajesSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="ListarViajesTodos">
-      <wsdl:input message="tns:ListarViajesTodosSoapIn" />
-      <wsdl:output message="tns:ListarViajesTodosSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Estadisticas">
       <wsdl:input message="tns:EstadisticasSoapIn" />
@@ -762,15 +742,6 @@
     </wsdl:operation>
     <wsdl:operation name="ListarViajes">
       <soap:operation soapAction="http://tempuri.org/ListarViajes" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarViajesTodos">
-      <soap:operation soapAction="http://tempuri.org/ListarViajesTodos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -981,15 +952,6 @@
     </wsdl:operation>
     <wsdl:operation name="ListarViajes">
       <soap12:operation soapAction="http://tempuri.org/ListarViajes" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="ListarViajesTodos">
-      <soap12:operation soapAction="http://tempuri.org/ListarViajesTodos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

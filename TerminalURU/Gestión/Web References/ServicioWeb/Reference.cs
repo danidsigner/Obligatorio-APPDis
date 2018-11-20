@@ -69,8 +69,6 @@ namespace Gestión.ServicioWeb {
         
         private System.Threading.SendOrPostCallback ListarViajesOperationCompleted;
         
-        private System.Threading.SendOrPostCallback ListarViajesTodosOperationCompleted;
-        
         private System.Threading.SendOrPostCallback EstadisticasOperationCompleted;
         
         private System.Threading.SendOrPostCallback DeclaroVInternacionalOperationCompleted;
@@ -174,9 +172,6 @@ namespace Gestión.ServicioWeb {
         
         /// <remarks/>
         public event ListarViajesCompletedEventHandler ListarViajesCompleted;
-        
-        /// <remarks/>
-        public event ListarViajesTodosCompletedEventHandler ListarViajesTodosCompleted;
         
         /// <remarks/>
         public event EstadisticasCompletedEventHandler EstadisticasCompleted;
@@ -748,33 +743,6 @@ namespace Gestión.ServicioWeb {
             if ((this.ListarViajesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ListarViajesCompleted(this, new ListarViajesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ListarViajesTodos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Viajes[] ListarViajesTodos() {
-            object[] results = this.Invoke("ListarViajesTodos", new object[0]);
-            return ((Viajes[])(results[0]));
-        }
-        
-        /// <remarks/>
-        public void ListarViajesTodosAsync() {
-            this.ListarViajesTodosAsync(null);
-        }
-        
-        /// <remarks/>
-        public void ListarViajesTodosAsync(object userState) {
-            if ((this.ListarViajesTodosOperationCompleted == null)) {
-                this.ListarViajesTodosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnListarViajesTodosOperationCompleted);
-            }
-            this.InvokeAsync("ListarViajesTodos", new object[0], this.ListarViajesTodosOperationCompleted, userState);
-        }
-        
-        private void OnListarViajesTodosOperationCompleted(object arg) {
-            if ((this.ListarViajesTodosCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.ListarViajesTodosCompleted(this, new ListarViajesTodosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1421,32 +1389,6 @@ namespace Gestión.ServicioWeb {
         private object[] results;
         
         internal ListarViajesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public Viajes[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((Viajes[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
-    public delegate void ListarViajesTodosCompletedEventHandler(object sender, ListarViajesTodosCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class ListarViajesTodosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal ListarViajesTodosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
