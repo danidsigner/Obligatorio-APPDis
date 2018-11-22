@@ -24,7 +24,7 @@ namespace EntidadesCompartidas
                     {
                         if (Char.IsNumber(value[i]))
                         {
-                            throw new Exception("Error: Ingrese un nombre válido.");
+                            throw new Exception("ExcepcionEX: Error: Ingrese un nombre válido.FinExcepcionEX");
                         }
 
                     }
@@ -46,7 +46,7 @@ namespace EntidadesCompartidas
                 }
                 else
                 {
-                    throw new Exception("Error: Ingrese una dirección válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una dirección válida.FinExcepcionEX");
                 }
             }
         }
@@ -59,7 +59,7 @@ namespace EntidadesCompartidas
             {
                 if (value.ToString().Length < 7 || value.ToString().Length > 13)
                 {
-                    throw new Exception("Error: Ingrese un teléfono válido.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese un teléfono válido.FinExcepcionEX");
                 }
                 else
                 {

@@ -17,7 +17,7 @@ namespace EntidadesCompartidas
             {
                 if (value < 0)
                 {
-                    throw new Exception("Ingrese un cantidad de paradas válida");
+                    throw new Exception("ExcepcionEX: Ingrese un cantidad de paradas válida.FinExcepcionEX");
                 }
                 else
                 {

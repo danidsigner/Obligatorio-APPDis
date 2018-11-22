@@ -52,11 +52,31 @@ namespace Gestión
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                lblError.Text = ex.Message;
+                manejoErrorWS(ex.Message);
             }
             catch (Exception ex)
             {
                 lblError.Text = ex.Message;
+            }
+        }
+
+        private void manejoErrorWS(string ex)
+        {
+            string palabraClave = "ExcepcionEX:";
+            string palabraClaveFin = "FinExcepcionEX";
+            int posicion = ex.IndexOf(palabraClave);
+            int posicionFin = ex.IndexOf(palabraClaveFin);
+            string errorOriginal = "";
+
+            if (posicion != 0 && posicionFin != 0)
+            {
+                errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
+                lblError.Text = errorOriginal;
+            }
+            else
+            {
+                errorOriginal = "Error de conexión.";
+                MessageBox.Show(errorOriginal);
             }
         }
     }

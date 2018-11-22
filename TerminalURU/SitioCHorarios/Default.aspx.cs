@@ -48,6 +48,14 @@ public partial class ConsultaViajes : System.Web.UI.Page
                 DDLDestino.SelectedIndex = -1;
                 DDLCompania.SelectedIndex = -1;
 
+                Dias1.SelectedDia = DateTime.Today.Day;
+                Meses1.SeleccionMes = DateTime.Today.Month;
+                Años1.SelectedAños = DateTime.Today.Year;
+
+                Dias2.SelectedDia = DateTime.Today.Day;
+                Meses2.SeleccionMes = DateTime.Today.Month;
+                Años2.SelectedAños = DateTime.Today.Year + 1;
+
                 bloquearFiltros();
             }
             catch (Exception ex)
@@ -87,18 +95,38 @@ public partial class ConsultaViajes : System.Web.UI.Page
         try
         {
             List<Viajes> viajes = (List<Viajes>)Session["TodosLosViajes"];
-            DateTime fecha = new DateTime(Años1.SelectedAños, Meses1.SeleccionMes, Dias1.SelectedDia, 0, 0, 0);
+            DateTime fecha1 = new DateTime(Años1.SelectedAños, Meses1.SeleccionMes, Dias1.SelectedDia, 0, 0, 0);
+            DateTime fecha2 = new DateTime(Años2.SelectedAños, Meses2.SeleccionMes,Dias2.SelectedDia,23,59,59);
             List<Viajes> resultado = new List<Viajes>();
 
-            if (DDLCompania.SelectedIndex != 0)
+            if (DDLDestino.SelectedIndex != 0)
             {
                 string a = DDLDestino.SelectedValue.ToString();
-                string c = DDLCompania.SelectedValue.ToString();
-                resultado = (from v in viajes
-                                          where v.t.codigo.Contains(a) && v.c.nombre.Contains(c) &&
-                                          Convert.ToDateTime(v.partida.ToString("yyyy/MM/dd")) == fecha
-                                          select v).ToList(); 
+
+                resultado = (from v in viajes where v.t.codigo.Contains(a) select v).ToList();
+                DDLCompania.Enabled = true;
+                Dias1.Enabled = true;
+                Meses1.Enabled = true;
+                Años1.Enabled = true;
+                Dias2.Enabled = true;
+                Meses2.Enabled = true;
+                Años2.Enabled = true;
+                if (DDLCompania.SelectedIndex != 0)
+                {
+                    string c = DDLCompania.SelectedValue.ToString();
+                    resultado = (from v in resultado
+                                 where v.c.nombre.Contains(c)
+                                 select v).ToList();
+                }
+                if (fecha1 >= DateTime.Today && fecha2 > fecha1)
+                {
+                    resultado = (from v in resultado
+                                 where (Convert.ToDateTime(v.partida.ToString("yyyy/MM/dd")) >= fecha1 &&
+                                       Convert.ToDateTime(v.partida.ToString("yyyy/MM/dd")) <= fecha2)
+                                 select v).ToList();
+                }
             }
+            
 
             RepeaterCViajes.DataSource = resultado;
             RepeaterCViajes.DataBind();
@@ -113,10 +141,7 @@ public partial class ConsultaViajes : System.Web.UI.Page
         if (DDLDestino.SelectedIndex != -1)
         {
             btnFiltro.Enabled = true;
-            DDLCompania.Enabled = true;
-            Dias1.Enabled = true;
-            Meses1.Enabled = true;
-            Años1.Enabled = true;
+            
         }
     }
 
@@ -127,5 +152,8 @@ public partial class ConsultaViajes : System.Web.UI.Page
         Dias1.Enabled = false;
         Meses1.Enabled = false;
         Años1.Enabled = false;
+        Dias2.Enabled = false;
+        Meses2.Enabled = false;
+        Años2.Enabled = false;
     }
 }

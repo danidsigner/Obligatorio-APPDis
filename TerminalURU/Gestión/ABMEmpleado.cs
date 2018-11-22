@@ -73,21 +73,31 @@ namespace Gestión
             try
             {
                 WebService WS = new WebService();
-                objEmpleado = WS.BuscarEmpleadosActivos(Convert.ToInt32(txtCI.Text));
+                int resultado = 0;
+                Int32.TryParse(txtCI.Text,out resultado);
+                if (resultado != 0)
+                {
+                    objEmpleado = WS.BuscarEmpleadosActivos(Convert.ToInt32(txtCI.Text));
+                    errorProvider1.Clear();
 
-                if (objEmpleado == null)
+                    if (objEmpleado == null)
                     ActivoAgregar();
+                    else
+                        ActivoActualizacion();
+                }
                 else
-                    ActivoActualizacion();
+                {
+                    errorProvider1.SetError(txtCI,"Ingrese una CI válida.");
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                lblError.Text = ex.Message;
+                manejoErrorWS(ex.Message);
             }
-            catch (Exception ex)
-            {
-                lblError.Text = ex.Message;
-            }
+            //catch (Exception ex)
+            //{
+            //    lblError.Text = ex.Message;
+            //}
         }
 
         private void txtContraseña_Validating(object sender, CancelEventArgs e)
@@ -113,7 +123,7 @@ namespace Gestión
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                lblError.Text = ex.Message;
+                manejoErrorWS(ex.Message);
             }
             catch (Exception ex)
             {
@@ -135,7 +145,7 @@ namespace Gestión
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                lblError.Text = ex.Message;
+                manejoErrorWS(ex.Message);
             }
             catch (Exception ex)
             {
@@ -172,7 +182,7 @@ namespace Gestión
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
-                lblError.Text = ex.Message;
+                manejoErrorWS(ex.Message);
             }
             catch (Exception ex)
             {
@@ -183,6 +193,26 @@ namespace Gestión
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.ActivoPorDefecto();
+        }
+
+        private void manejoErrorWS(string ex)
+        {
+            string palabraClave = "ExcepcionEX:";
+            string palabraClaveFin = "FinExcepcionEX";
+            int posicion = ex.IndexOf(palabraClave);
+            int posicionFin = ex.IndexOf(palabraClaveFin);
+            string errorOriginal = "";
+
+            if (posicion != 0 && posicionFin != 0)
+            {
+                errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
+                lblError.Text = errorOriginal;
+            }
+            else
+            {
+                errorOriginal = "Error de conexión.";
+                MessageBox.Show(errorOriginal);
+            }
         }
     }
 }

@@ -27,14 +27,14 @@ namespace EntidadesCompartidas
                         //Comprueba el dato ingresado, verifica que sean letras
                         if (!Char.IsLetter(Convert.ToChar(value.Substring(i, 1))))
                         {
-                            throw new Exception("Error el código solo pueden ser tres letras.");
+                            throw new Exception("ExcepcionEX:Error el código solo pueden ser tres letras.FinExcepcionEX");
                         }
                     }
                     Codigo = value;
                 }
                 else
                 {
-                    throw new Exception("Error el código solo pueden ser tres letras.");
+                    throw new Exception("ExcepcionEX:Error el código solo pueden ser tres letras.FinExcepcionEX");
                 }
             }
 
@@ -49,7 +49,7 @@ namespace EntidadesCompartidas
             {
                 if (value.ToString().Length < 5)
                 {
-                    throw new Exception("Error: Ingrese una ciudad válida.");
+                    throw new Exception("ExcepcionEX: Ingrese una ciudad válida.FinExcepcionEX");
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace EntidadesCompartidas
                 }
                 else
                 {
-                    throw new Exception("Solamente pueden registrarse paises del Mercosur.");
+                    throw new Exception("ExcepcionEX: Solamente pueden registrarse paises del Mercosur.FinExcepcionEX");
                 }
             }
         }

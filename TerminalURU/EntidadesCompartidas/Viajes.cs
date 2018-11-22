@@ -23,7 +23,7 @@ namespace EntidadesCompartidas
             {
                 if (value <= 0)
                 {
-                    throw new Exception("Error: Ingrese un número de viaje válido.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese un número de viaje válido.FinExcepcionEX");
                 }
                 else
                 {
@@ -40,7 +40,7 @@ namespace EntidadesCompartidas
             {
                 if (value <= 0)
                 {
-                    throw new Exception("Error: Ingrese una cantdad de asientos válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una cantdad de asientos válida.FinExcepcionEX");
                 }
                 else
                 {
@@ -57,7 +57,7 @@ namespace EntidadesCompartidas
             {
                 if (value==null)
                 {
-                    throw new Exception("Fecha de partida inválida.");
+                    throw new Exception("ExcepcionEX: Fecha de partida inválida.FinExcepcionEX");
                 }
 
                 Partida = value;
@@ -72,7 +72,7 @@ namespace EntidadesCompartidas
             {
                 if (value==null)
                 {
-                    throw new Exception("Fecha de arribo inválida.");
+                    throw new Exception("ExcepcionEX: Fecha de arribo inválida.FinExcepcionEX");
                 }
                 Arribo = value;
             }
@@ -86,7 +86,7 @@ namespace EntidadesCompartidas
             {
                 if (value == null)
                 {
-                    throw new Exception("Error: Ingrese un empleado válido.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese un empleado válido.FinExcepcionEX");
                 }
                 else
                 {
@@ -102,7 +102,7 @@ namespace EntidadesCompartidas
             {
                 if (value == null)
                 {
-                    throw new Exception("Error: Ingrese una terminal válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una terminal válida.FinExcepcionEX");
                 }
                 else
                 {
@@ -119,7 +119,7 @@ namespace EntidadesCompartidas
             {
                 if (value == null)
                 {
-                    throw new Exception("Error: Ingrese una compania válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una compania válida.FinExcepcionEX");
                 }
                 else
                 {

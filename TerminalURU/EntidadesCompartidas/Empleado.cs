@@ -19,11 +19,22 @@ namespace EntidadesCompartidas
             {
                 if (value.ToString().Length != 8)
                 {
-                    throw new Exception("Error: Ingrese una cédula válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una cédula válida.FinExcepcionEX");
                 }
                 else
                 {
-                    CI = value;
+                    for (int i = 0; i < value.ToString().Length; i++)
+                    {
+                        //Comprueba el dato ingresado, verifica que sean letras
+                        if (Char.IsLetter(Convert.ToChar(value.ToString().Substring(i, 1))))
+                        {
+                            throw new Exception("ExcepcionEX:Error: Ingrese una cédula válida.FinExcepcionEX");
+                        }
+                        else
+                        {
+                            CI = value;
+                        }
+                    }
                 }
             }
         }
@@ -36,7 +47,7 @@ namespace EntidadesCompartidas
             {
                 if (value.Trim().ToString().Length < 7 || value.Trim().ToString().Length >= 30)
                 {
-                    throw new Exception("Error: Ingrese un nombre válido.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese un nombre válido.FinExcepcionEX");
                 }
                 else
                 {
@@ -51,9 +62,9 @@ namespace EntidadesCompartidas
             get { return Contraseña; }
             set
             {
-                if (value.ToString().Length != 6 )
+                if (value.ToString().Length != 6)
                 {
-                    throw new Exception("Error: Ingrese una contraseña válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una contraseña válida.FinExcepcionEX");
                 }
                 else
                 {

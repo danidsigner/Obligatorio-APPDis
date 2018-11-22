@@ -37,7 +37,7 @@ namespace EntidadesCompartidas
             {
                 if (value.ToString().Length < 5 || value.ToString().Length > 200)
                 {
-                    throw new Exception("Error: Ingrese una documentación válida.");
+                    throw new Exception("ExcepcionEX: Error: Ingrese una documentación válida.FinExcepcionEX");
                 }
                 else
                 {

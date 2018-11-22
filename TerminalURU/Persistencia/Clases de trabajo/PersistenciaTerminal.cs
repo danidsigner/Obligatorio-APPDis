@@ -192,7 +192,9 @@ namespace Persistencia
             }
             catch (Exception ex)
             {
-                _miTransaccion.Rollback();
+                //string palabraClave = "palabraClave" + ex.Message;
+                //ex = new Exception(palabraClave);
+                //_miTransaccion.Rollback();
                 throw ex;
             }
             finally

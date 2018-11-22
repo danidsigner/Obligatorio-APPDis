@@ -36,7 +36,10 @@
             this.btnFiltrarPais = new System.Windows.Forms.Button();
             this.btnViajesAño = new System.Windows.Forms.Button();
             this.cbPaises = new System.Windows.Forms.ComboBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblError = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtpInicio
@@ -109,11 +112,27 @@
             this.cbPaises.Size = new System.Drawing.Size(121, 21);
             this.cbPaises.TabIndex = 9;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblError});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 399);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1132, 22);
+            this.statusStrip1.TabIndex = 10;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblError
+            // 
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 17);
+            // 
             // Estadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 421);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.cbPaises);
             this.Controls.Add(this.btnViajesAño);
             this.Controls.Add(this.btnFiltrarPais);
@@ -126,7 +145,10 @@
             this.Text = "Estadisticas";
             this.Load += new System.EventHandler(this.Estadisticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,5 +162,7 @@
         private System.Windows.Forms.Button btnFiltrarPais;
         private System.Windows.Forms.Button btnViajesAño;
         private System.Windows.Forms.ComboBox cbPaises;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblError;
     }
 }
