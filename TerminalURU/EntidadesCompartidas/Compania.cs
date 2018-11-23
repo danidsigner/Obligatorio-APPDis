@@ -26,11 +26,9 @@ namespace EntidadesCompartidas
                         {
                             throw new Exception("ExcepcionEX: Error: Ingrese un nombre válido.FinExcepcionEX");
                         }
-
                     }
                     Nombre = value.ToUpper().Trim();
                 }
-
             }
         }
 

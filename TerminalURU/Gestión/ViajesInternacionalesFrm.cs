@@ -66,6 +66,7 @@ namespace Gestión
             dtpArribo.Value = DateTime.Now;
             cbServAbordo.Checked = false;
             txtDocumentacion.Text = "";
+            errorProvider1.Clear();
             lblError.Text = "";
         }
 
@@ -74,6 +75,8 @@ namespace Gestión
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
+            errorProvider1.Clear();
+            lblError.Text = "";
 
             txtNumero.Enabled = false;
             txtCantAsientos.Text = objViajeInter.cantAsientos.ToString();
@@ -87,6 +90,8 @@ namespace Gestión
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+            errorProvider1.Clear();
+            lblError.Text = "";
 
             txtNumero.Enabled = false;
             txtCantAsientos.Text = "";

@@ -51,6 +51,7 @@ namespace CControl
             lblContraseña.Text = "Contraseña";
 
             btnLogin = new Button();
+            btnLogin.Width = 100;
             btnLogin.Text = "Login";
 
             btnLogin.Click += new EventHandler(btnLogin_Click);

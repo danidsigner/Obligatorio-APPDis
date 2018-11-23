@@ -16,7 +16,6 @@ namespace Gestión
         public Logueo()
         {
             InitializeComponent();
-            this.CenterToScreen();
         }
 
         private void Logueo_Load(object sender, EventArgs e)

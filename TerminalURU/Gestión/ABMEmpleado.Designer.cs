@@ -58,7 +58,7 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(428, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(339, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -114,7 +114,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 129);
+            this.label2.Location = new System.Drawing.Point(37, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 2;
@@ -123,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 180);
+            this.label3.Location = new System.Drawing.Point(37, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 3;
@@ -133,24 +133,24 @@
             // 
             this.txtCI.Location = new System.Drawing.Point(154, 71);
             this.txtCI.Name = "txtCI";
-            this.txtCI.Size = new System.Drawing.Size(100, 20);
+            this.txtCI.Size = new System.Drawing.Size(145, 20);
             this.txtCI.TabIndex = 4;
             this.txtCI.Validating += new System.ComponentModel.CancelEventHandler(this.txtCI_Validating);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(154, 122);
+            this.txtNombre.Location = new System.Drawing.Point(154, 137);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(145, 20);
             this.txtNombre.TabIndex = 5;
             this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(154, 173);
+            this.txtContraseña.Location = new System.Drawing.Point(154, 203);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(145, 20);
             this.txtContraseña.TabIndex = 6;
             this.txtContraseña.Validating += new System.ComponentModel.CancelEventHandler(this.txtContraseña_Validating);
             // 
@@ -158,9 +158,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblError});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 265);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 272);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(428, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(339, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -177,7 +177,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 287);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(339, 294);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtNombre);
@@ -186,7 +187,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ABMEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMEmpleado";
             this.Load += new System.EventHandler(this.ABMEmpleado_Load);
             this.toolStrip1.ResumeLayout(false);

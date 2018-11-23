@@ -32,7 +32,8 @@ public partial class ConsultaViajes : System.Web.UI.Page
                     companias.Add(viajes.c);
                 }
 
-                var resultadoT = ((from t in terminales group t by t.codigo into b select b.Key)).ToList<object>();
+                var resultadoT = (from t in terminales group t by t.codigo into g
+                                   select g.First().codigo + " - " + g.First().ciudad.ToString()).ToList<object>();
 
                 foreach (var j in resultadoT)
                 {
@@ -101,8 +102,8 @@ public partial class ConsultaViajes : System.Web.UI.Page
 
             if (DDLDestino.SelectedIndex != 0)
             {
-                string a = DDLDestino.SelectedValue.ToString();
-
+                string destino = DDLDestino.SelectedValue.ToString();
+                string a = destino.Substring(0,3);
                 resultado = (from v in viajes where v.t.codigo.Contains(a) select v).ToList();
                 DDLCompania.Enabled = true;
                 Dias1.Enabled = true;

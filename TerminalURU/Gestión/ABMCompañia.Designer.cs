@@ -123,25 +123,25 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(75, 49);
+            this.txtNombre.Location = new System.Drawing.Point(129, 49);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(134, 20);
             this.txtNombre.TabIndex = 2;
             this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(75, 96);
+            this.txtDireccion.Location = new System.Drawing.Point(129, 111);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(134, 20);
             this.txtDireccion.TabIndex = 3;
             this.txtDireccion.Validating += new System.ComponentModel.CancelEventHandler(this.txtDireccion_Validating);
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(75, 154);
+            this.txtTelefono.Location = new System.Drawing.Point(129, 175);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(134, 20);
             this.txtTelefono.TabIndex = 4;
             this.txtTelefono.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefono_Validating);
             // 
@@ -157,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 102);
+            this.label2.Location = new System.Drawing.Point(13, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 6;
@@ -166,7 +166,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 160);
+            this.label3.Location = new System.Drawing.Point(13, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 7;
@@ -176,6 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -185,7 +186,10 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ABMCompañia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMCompañia";
             this.Load += new System.EventHandler(this.ABMCompañia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

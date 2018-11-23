@@ -45,13 +45,21 @@ namespace EntidadesCompartidas
             get { return NombreCompleto; }
             set
             {
-                if (value.Trim().ToString().Length < 7 || value.Trim().ToString().Length >= 30)
+                value.Trim();
+                if (value.ToString().Length > 7 || value.ToString().Length <= 30)
                 {
-                    throw new Exception("ExcepcionEX: Error: Ingrese un nombre válido.FinExcepcionEX");
+                    for (int i = 0; i < value.Length; i++)
+                    {
+                        if (Char.IsNumber(value[i]))
+                        {
+                            throw new Exception("ExcepcionEX: Error: Ingrese un nombre válido.FinExcepcionEX");
+                        }
+                    }
+                    NombreCompleto = value;
                 }
                 else
                 {
-                    NombreCompleto = value;
+                    throw new Exception("ExcepcionEX: Error: Ingrese un nombre válido.FinExcepcionEX");
                 }
             }
         }

@@ -688,7 +688,6 @@ exec AltaCompania 'Copsa','Bolivia 1473',098786532
 go
 exec AltaCompania 'Cutsa','Rivera 7240',095324580
 go
-
 exec AltaEmpleado 46181064,'Pablo Gonzalez','pablo1'
 go
 exec AltaEmpleado 53062247,'Juan Lopez','juan01'

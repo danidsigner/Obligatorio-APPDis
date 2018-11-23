@@ -28,6 +28,7 @@ namespace Gestión
             txtNombre.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
+            errorProvider1.Clear();
             lblError.Text = "";
         }
 
@@ -36,6 +37,8 @@ namespace Gestión
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
+            errorProvider1.Clear();
+            lblError.Text = "";
 
             txtDireccion.Text = objCompañia.direccion;
             txtTelefono.Text = objCompañia.telefono.ToString();
@@ -46,8 +49,10 @@ namespace Gestión
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
-
             txtNombre.Enabled = false;
+            errorProvider1.Clear();
+
+            lblError.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
         }
@@ -68,10 +73,10 @@ namespace Gestión
             try
             {
                 WebService WS = new WebService();
-                objCompañia = WS.BuscarCompañia(txtNombre.Text);
-                
                 if (txtNombre.Text.Length != 0)
                 {
+                    objCompañia = WS.BuscarCompañia(txtNombre.Text);
+
                     errorProvider1.Clear();
                     if (objCompañia == null)
                     {

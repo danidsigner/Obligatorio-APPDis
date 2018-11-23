@@ -13,23 +13,24 @@ namespace Gestión
     public partial class ABMTerminal : Form
     {
         private Terminal objTerminal = null;
-        public ABMTerminal()
+        public ABMTerminal ()
         {
             InitializeComponent();
             this.CenterToScreen();
         }
 
-        private void Terminal_Load(object sender, EventArgs e)
+        private void Terminal_Load (object sender, EventArgs e)
         {
             this.ActivoPorDefecto();
         }
 
-        private void ActivoPorDefecto()
+        private void ActivoPorDefecto ()
         {
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
-
+            errorProvider1.Clear();
+            lblError.Text = "";
             txtCodigo.Enabled = true;
             txtCodigo.Text = "";
             txtCiudad.Text = "";
@@ -39,11 +40,12 @@ namespace Gestión
             lbFacilidades.Items.Clear();
         }
 
-        private void ActivoActualizacion()
+        private void ActivoActualizacion ()
         {
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
+            errorProvider1.Clear();
             lblError.Text = "";
 
             txtCodigo.Enabled = false;
@@ -55,12 +57,13 @@ namespace Gestión
             }
         }
 
-        private void ActivoAgregar()
+        private void ActivoAgregar ()
         {
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
-
+            errorProvider1.Clear();
+            lblError.Text = "";
             txtCodigo.Enabled = false;
             txtCiudad.Text = "";
             txtPais.Text = "";
@@ -68,7 +71,7 @@ namespace Gestión
             lbFacilidades.DataSource = null;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click (object sender, EventArgs e)
         {
             List<string> lista = new List<string>();
             foreach (string f in lbFacilidades.Items)
@@ -98,7 +101,7 @@ namespace Gestión
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar_Click (object sender, EventArgs e)
         {
             WebService WS = new WebService();
             List<string> lista = new List<string>();
@@ -126,7 +129,7 @@ namespace Gestión
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click (object sender, EventArgs e)
         {
             WebService WS = new WebService();
 
@@ -147,12 +150,12 @@ namespace Gestión
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click (object sender, EventArgs e)
         {
             this.ActivoPorDefecto();
         }
 
-        private void btnAgregarFacilidad_Click(object sender, EventArgs e)
+        private void btnAgregarFacilidad_Click (object sender, EventArgs e)
         {
             bool repetidos = false;
             try
@@ -176,42 +179,60 @@ namespace Gestión
                     }
                 }
                 txtFacilidad.Text = "";
-            }            
-            catch (Exception ex)
-            { lblError.Text = ex.Message; }
-        }
-
-        private void btnEliminarFacilidad_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                lbFacilidades.Items.RemoveAt(lbFacilidades.SelectedIndex);
             }
             catch (Exception ex)
             { lblError.Text = ex.Message; }
         }
 
-        private void txtCodigo_Validating(object sender, CancelEventArgs e)
+        private void btnEliminarFacilidad_Click (object sender, EventArgs e)
+        {
+            try
+            {
+                if (lbFacilidades.SelectedIndex != -1)
+                {
+                    lbFacilidades.Items.RemoveAt(lbFacilidades.SelectedIndex);
+                } 
+            }
+            catch (Exception ex)
+            { lblError.Text = ex.Message; }
+        }
+
+        private void txtCodigo_Validating (object sender, CancelEventArgs e)
         {
             if (txtCodigo.Text == "" || txtCodigo.Text.Length != 3)
                 errorProvider1.SetError(txtCodigo, lblError.Text = "Ingrese un código valido");
 
             else
             {
-                errorProvider1.Clear();
-                lblError.Text = "";
-                WebService WS = new WebService();
+                bool numeros = true;
+                for (int i = 0; i < txtCodigo.Text.Length; i++)
+                {
+                    //Comprueba el dato ingresado, verifica que sean letras
+                    if (!Char.IsLetter(Convert.ToChar(txtCodigo.Text.Substring(i, 1))))
+                    {
+                        errorProvider1.SetError(txtCodigo, "Ingrese un código válido.");
+                        numeros = false;
+                    }
+                }
+
                 try
                 {
-                    objTerminal = WS.BuscarTerminalActiva(txtCodigo.Text);
-                    if (objTerminal != null)
+                    WebService WS = new WebService();
+                    if (numeros == true)
                     {
-                        ActivoActualizacion();
+                        objTerminal = WS.BuscarTerminalActiva(txtCodigo.Text);
+                        if (objTerminal != null)
+                        {
+                            ActivoActualizacion();
+                        }
+                        else
+                        {
+                            ActivoAgregar();
+                        }
+                        errorProvider1.Clear();
+                        lblError.Text = "";
                     }
-                    else
-                    {
-                        ActivoAgregar();
-                    }
+
                 }
                 catch (System.Web.Services.Protocols.SoapException ex)
                 {
@@ -224,7 +245,7 @@ namespace Gestión
             }
         }
 
-        private void txtCiudad_Validating(object sender, CancelEventArgs e)
+        private void txtCiudad_Validating (object sender, CancelEventArgs e)
         {
             if (txtCiudad.Text == "")
                 errorProvider1.SetError(txtCiudad, lblError.Text = "Debe ingresar una ciudad");
@@ -236,7 +257,7 @@ namespace Gestión
             }
         }
 
-        private void txtPais_Validating(object sender, CancelEventArgs e)
+        private void txtPais_Validating (object sender, CancelEventArgs e)
         {
             if (txtPais.Text == "")
                 errorProvider1.SetError(txtPais, lblError.Text = "Debe ingresar un país");
@@ -248,7 +269,7 @@ namespace Gestión
             }
         }
 
-        private void manejoErrorWS(string ex)
+        private void manejoErrorWS (string ex)
         {
             string palabraClave = "ExcepcionEX:";
             string palabraClaveFin = "FinExcepcionEX";
@@ -265,7 +286,7 @@ namespace Gestión
             {
                 errorOriginal = "Error de conexión.";
                 MessageBox.Show(errorOriginal);
-            } 
+            }
         }
     }
 }

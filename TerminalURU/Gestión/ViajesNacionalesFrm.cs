@@ -33,7 +33,7 @@ namespace Gestión
                 listaC = WS.ListarCompanias();
                 foreach (Terminal t in listaT)
                 {
-                    cbTerminal.Items.Add(t.ciudad);
+                    cbTerminal.Items.Add(t.codigo);
                 }
                 foreach (Compania c in listaC)
                 {
@@ -61,9 +61,13 @@ namespace Gestión
             txtEmpleado.Text = empLogueado.nombreCompleto;
             txtCantAsientos.Text = "";
             txtCantParadas.Text = "";
+            txtNumero.Text = "";
+            errorProvider1.Clear();
             lblError.Text = "";
             dtpPartida.Value = DateTime.Now;
             dtpArribo.Value = DateTime.Now;
+            cbTerminal.SelectedIndex = -1;
+            cbCompañia.SelectedIndex = -1;
         }
 
         private void ActivoActualizacion()
@@ -71,6 +75,8 @@ namespace Gestión
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
+            errorProvider1.Clear();
+            lblError.Text = "";
 
             txtNumero.Enabled = false;
             txtCantAsientos.Text = objNacionales.cantAsientos.ToString();
@@ -78,6 +84,8 @@ namespace Gestión
             txtEmpleado.Text = objNacionales.e.nombreCompleto;
             dtpPartida.Value = objNacionales.partida;
             dtpArribo.Value = objNacionales.arribo;
+            cbCompañia.SelectedItem = objNacionales.c.nombre;
+            cbTerminal.SelectedItem = objNacionales.t.codigo;
         }
 
         private void ActivoAgregar()
@@ -85,6 +93,8 @@ namespace Gestión
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+            errorProvider1.Clear();
+            lblError.Text = "";
 
             txtNumero.Enabled = false;
             txtCantAsientos.Text = "";

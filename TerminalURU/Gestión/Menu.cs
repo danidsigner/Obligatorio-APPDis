@@ -163,5 +163,23 @@ namespace Gestión
                 lblError.Text = ex.Message;
             }
         }
+
+        private void cerrarSesiónToolStripMenuItem_Click (object sender, EventArgs e)
+        {
+            EmpLogueado = null;
+            List<Form> LFA = new List<Form>();
+            LFA.Clear();
+            foreach (Form FRM in Application.OpenForms)
+            {
+                LFA.Add(FRM);
+            }
+            for (int X = 0; (X <= (LFA.Count - 1)); X++)
+            {
+                if (LFA[X].Name == "Logueo")
+                    LFA[X].Show();
+                else
+                    LFA[X].Close();
+            }
+        }
     }
 }
