@@ -8,37 +8,7 @@
 <head id="Head1" runat="server">
 <link href="Estilos/css/MisEstilos.css" rel ="Stylesheet" type ="text/css" />
     <title>Listado de viajes</title>
-    <style type="text/css">
-        .style6
-        {
-            width: 202px;
-        }
-        .style11
-        {
-            width: 123px;
-        }
-        .Forms
-        {}
-        .style13
-        {
-            width: 156px;
-        }
-        .style15
-        {
-            width: 153px;
-        }
-        .style16
-        {
-        }
-        .style17
-        {
-            width: 168px;
-        }
-        .style18
-        {
-            width: 310px;
-        }
-    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">

@@ -80,7 +80,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Ya existe un empleado con esa cédula.");
+                    throw new Exception("ExcepcionEX:Ya existe un empleado con esa cédula.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -114,7 +114,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Error al modificar empleado.");
+                    throw new Exception("ExcepcionEX:Error al modificar empleado.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -146,7 +146,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Error al eliminar empleado.");
+                    throw new Exception("ExcepcionEX:Error al eliminar empleado.FinExcepcionEX");
                 }
             }
             catch (Exception ex)

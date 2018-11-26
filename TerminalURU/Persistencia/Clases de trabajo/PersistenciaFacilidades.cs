@@ -68,11 +68,11 @@ namespace Persistencia
 
                 if (r == -1)
                 {
-                    throw new Exception("La facilidad " + facilidad + " es inválida");
+                    throw new Exception("ExcepcionEX:La facilidad " + facilidad + " es inválida.FinExcepcionEX");
                 }
                 else if (r == -2)
                 {
-                    throw new Exception("Terminal invalida");
+                    throw new Exception("ExcepcionEX:Terminal invalida.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -97,7 +97,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r != 1)
                 {
-                    throw new Exception("Error al eliminar las facilidades.");
+                    throw new Exception("ExcepcionEX:Error al eliminar las facilidades.FinExcepcionEX");
                 }
             }
             catch (Exception ex)

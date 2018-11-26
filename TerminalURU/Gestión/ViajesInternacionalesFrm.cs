@@ -29,18 +29,19 @@ namespace Gestión
         {
             try
             {
-                this.ActivoPorDefecto();
+                
                 WebService WS = new WebService();
                 listaT = WS.ListarTerminales();
                 listaC = WS.ListarCompanias();
                 foreach (Terminal t in listaT)
                 {
-                    cbTerminal.Items.Add(t.ciudad);
+                    cbTerminal.Items.Add(t.codigo);
                 }
                 foreach (Compania c in listaC)
                 {
                     cbCompañia.Items.Add(c.nombre);
                 }
+                this.ActivoPorDefecto();
             }
 
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -59,7 +60,10 @@ namespace Gestión
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
 
+            cbCompañia.SelectedIndex = 0;
+            cbTerminal.SelectedIndex = 0;
             txtNumero.Enabled = true;
+            txtNumero.Text = "";
             txtEmpleado.Text = empLogueado.nombreCompleto;
             txtCantAsientos.Text = "";
             dtpPartida.Value = DateTime.Now;
@@ -82,7 +86,18 @@ namespace Gestión
             txtCantAsientos.Text = objViajeInter.cantAsientos.ToString();
             dtpPartida.Value = objViajeInter.partida;
             dtpArribo.Value = objViajeInter.arribo;
-            txtDocumentacion.Text = "";
+            cbCompañia.SelectedItem = objViajeInter.c.nombre;
+            cbTerminal.SelectedItem = objViajeInter.t.codigo;
+            if (objViajeInter.servAbordo == true)
+            {
+                cbServAbordo.Checked = true;
+            }
+            else
+            {
+                cbServAbordo.Checked = false;
+            }
+            
+            txtDocumentacion.Text = objViajeInter.documentacion;
         }
 
         private void ActivoAgregar()
@@ -199,23 +214,30 @@ namespace Gestión
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //
-            //
-            //consultar si puede haber mas de una terminal en la misma ciudad
-            //
-            //
             try
             {
+                bool bandera = true;
+                int salida = 0;
                 WebService WS = new WebService();
                 objViajeInter = new Internacionales();
-                objViajeInter.numero = Convert.ToInt32(txtNumero);
-                objViajeInter.cantAsientos = Convert.ToInt32(txtCantAsientos.Text);
+                objViajeInter.numero = Convert.ToInt32(txtNumero.Text);
+                if (Int32.TryParse(txtCantAsientos.Text, out salida))
+                {
+                    objViajeInter.cantAsientos = salida;
+                    bandera = true;
+                }
+                else
+                {
+                    lblError.Text = "Ingrese una cantidad de asientos válida.";
+                    bandera = false;
+                }
                 objViajeInter.partida = dtpPartida.Value;
                 objViajeInter.arribo = dtpArribo.Value;
+
                 objViajeInter.e = empLogueado;
                 foreach (Terminal t in listaT)
                 {
-                    if (t.ciudad == cbTerminal.SelectedItem.ToString())
+                    if (t.codigo == cbTerminal.SelectedItem.ToString())
                     {
                         objViajeInter.t = t;
                     }
@@ -228,11 +250,16 @@ namespace Gestión
                     }
                 }
                 objViajeInter.servAbordo = cbServAbordo.Checked;
-                objViajeInter.documentacion = txtDocumentacion.Text;
 
-                WS.AltaViaje(objViajeInter);
-                lblError.Text = "Alta con éxito.";
-                this.ActivoPorDefecto();
+                objViajeInter.documentacion = txtDocumentacion.Text;
+                if (bandera == true)
+                {
+                    WS.AltaViaje(objViajeInter);
+
+                    this.ActivoPorDefecto();
+                    lblError.Text = "Alta con éxito.";
+                    errorProvider1.Clear();
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -248,15 +275,30 @@ namespace Gestión
         {
             try
             {
+                bool bandera = true;
+                int salida = 0;
                 WebService WS = new WebService();
-                objViajeInter.numero = Convert.ToInt32(txtNumero);
-                objViajeInter.cantAsientos = Convert.ToInt32(txtCantAsientos.Text);
+                objViajeInter = new Internacionales();
+                objViajeInter.numero = Convert.ToInt32(txtNumero.Text);
+
+                if (Int32.TryParse(txtCantAsientos.Text, out salida))
+                {
+                    objViajeInter.cantAsientos = salida;
+                    bandera = true;
+                }
+                else
+                {
+                    lblError.Text = "Ingrese una cantidad de asientos válida.";
+                    bandera = false;
+                }
                 objViajeInter.partida = dtpPartida.Value;
                 objViajeInter.arribo = dtpArribo.Value;
+
                 objViajeInter.e = empLogueado;
+
                 foreach (Terminal t in listaT)
                 {
-                    if (t.ciudad == cbTerminal.SelectedItem.ToString())
+                    if (t.codigo == cbTerminal.SelectedItem.ToString())
                     {
                         objViajeInter.t = t;
                     }
@@ -269,11 +311,17 @@ namespace Gestión
                     }
                 }
                 objViajeInter.servAbordo = cbServAbordo.Checked;
-                objViajeInter.documentacion = txtDocumentacion.Text;
 
-                WS.ModificarViaje(objViajeInter);
-                lblError.Text = "Modificación con éxito.";
-                this.ActivoPorDefecto();
+                objViajeInter.documentacion = txtDocumentacion.Text;
+                if (bandera == true)
+                {
+                    WS.ModificarViaje(objViajeInter);
+
+                    this.ActivoPorDefecto();
+                    lblError.Text = "Modificación con éxito.";
+                    errorProvider1.Clear();
+
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -291,8 +339,11 @@ namespace Gestión
             {
                 WebService WS = new WebService();
                 WS.BajaViaje(objViajeInter);
-                lblError.Text = "Baja con éxito.";
+
                 this.ActivoPorDefecto();
+                lblError.Text = "Baja con éxito.";
+                errorProvider1.Clear();
+
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -317,7 +368,7 @@ namespace Gestión
             int posicionFin = ex.IndexOf(palabraClaveFin);
             string errorOriginal = "";
 
-            if (posicion != 0 && posicionFin != 0)
+            if (posicion != -1 && posicionFin != -1)
             {
                 errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
                 lblError.Text = errorOriginal;

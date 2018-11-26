@@ -181,7 +181,7 @@ namespace Persistencia
 
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
-                    throw new Exception("Esta terminal ya existe");
+                    throw new Exception("ExcepcionEX:Esta terminal ya existe.FinExcepcionEX");
 
                 foreach (string s in T.facilidades)
                 {
@@ -192,9 +192,7 @@ namespace Persistencia
             }
             catch (Exception ex)
             {
-                //string palabraClave = "palabraClave" + ex.Message;
-                //ex = new Exception(palabraClave);
-                //_miTransaccion.Rollback();
+                _miTransaccion.Rollback();
                 throw ex;
             }
             finally
@@ -228,7 +226,7 @@ namespace Persistencia
 
             int r = Convert.ToInt32(retorno.Value);
             if (r == -1)
-                throw new Exception("La terminal no existe.");
+                throw new Exception("ExcepcionEX:La terminal no existe.FinExcepcionEX");
 
             PersistenciaFacilidades.BajaFacilidades(T, _miTransaccion);
 
@@ -267,7 +265,7 @@ namespace Persistencia
 
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
-                    throw new Exception("Error al eliminar la terminal.");
+                    throw new Exception("ExcepcionEX:Error al eliminar la terminal.FinExcepcionEX");
             }
             catch (Exception ex)
             {

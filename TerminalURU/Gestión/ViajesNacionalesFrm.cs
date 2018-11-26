@@ -17,17 +17,16 @@ namespace Gestión
         private Array listaT;
         private Array listaC;
 
-        public ViajesNacionalesFrm(Empleado emp)
+        public ViajesNacionalesFrm (Empleado emp)
         {
             InitializeComponent();
             empLogueado = emp;
         }
 
-        private void ViajesNacionalesFrm_Load(object sender, EventArgs e)
+        private void ViajesNacionalesFrm_Load (object sender, EventArgs e)
         {
             try
             {
-                this.ActivoPorDefecto();
                 WebService WS = new WebService();
                 listaT = WS.ListarTerminales();
                 listaC = WS.ListarCompanias();
@@ -39,6 +38,9 @@ namespace Gestión
                 {
                     cbCompañia.Items.Add(c.nombre);
                 }
+                cbTerminal.SelectedIndex = 0;
+                cbCompañia.SelectedIndex = 0;
+                this.ActivoPorDefecto();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -51,7 +53,7 @@ namespace Gestión
 
         }
 
-        private void ActivoPorDefecto()
+        private void ActivoPorDefecto ()
         {
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -66,11 +68,11 @@ namespace Gestión
             lblError.Text = "";
             dtpPartida.Value = DateTime.Now;
             dtpArribo.Value = DateTime.Now;
-            cbTerminal.SelectedIndex = -1;
-            cbCompañia.SelectedIndex = -1;
+            cbTerminal.SelectedIndex = 0;
+            cbCompañia.SelectedIndex = 0;
         }
 
-        private void ActivoActualizacion()
+        private void ActivoActualizacion ()
         {
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
@@ -88,7 +90,7 @@ namespace Gestión
             cbTerminal.SelectedItem = objNacionales.t.codigo;
         }
 
-        private void ActivoAgregar()
+        private void ActivoAgregar ()
         {
             btnAgregar.Enabled = true;
             btnEliminar.Enabled = false;
@@ -104,12 +106,13 @@ namespace Gestión
             dtpArribo.Value = DateTime.Now;
         }
 
-        private void txtNumero_Validating(object sender, CancelEventArgs e)
+        private void txtNumero_Validating (object sender, CancelEventArgs e)
         {
             try
             {
+                int salida = 0;
                 WebService WS = new WebService();
-                if (txtNumero.Text.Length != 0)
+                if (Int32.TryParse(txtNumero.Text, out salida))
                 {
                     errorProvider1.Clear();
                     Viajes viaje = WS.BuscarViaje(Convert.ToInt32(txtNumero.Text));
@@ -132,7 +135,7 @@ namespace Gestión
                 }
                 else
                 {
-                    errorProvider1.SetError(txtNumero, "Debe rellenar este campo.");
+                    errorProvider1.SetError(txtNumero, "Ingrese un número válido.");
                 }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -145,15 +148,16 @@ namespace Gestión
             }
         }
 
-        private void txtCantAsientos_Validating(object sender, CancelEventArgs e)
+        private void txtCantAsientos_Validating (object sender, CancelEventArgs e)
         {
-            if (txtCantAsientos.Text == "")
-                errorProvider1.SetError(txtCantAsientos, "Debe rellenar este campo.");
+            int salida = 0;
+            if (!Int32.TryParse(txtCantAsientos.Text, out salida))
+                errorProvider1.SetError(txtCantAsientos, "Ingrese una cantidad válida.");
             else
                 errorProvider1.Clear();
         }
 
-        private void dtpPartida_Validating(object sender, CancelEventArgs e)
+        private void dtpPartida_Validating (object sender, CancelEventArgs e)
         {
             if (dtpPartida.Value < DateTime.Now)
             {
@@ -163,9 +167,9 @@ namespace Gestión
                 errorProvider1.Clear();
         }
 
-        private void dtpArribo_Validating(object sender, CancelEventArgs e)
+        private void dtpArribo_Validating (object sender, CancelEventArgs e)
         {
-            if (dtpArribo.Value < dtpPartida.Value)
+            if (dtpArribo.Value < dtpPartida.Value || dtpArribo.Value < DateTime.Now)
             {
                 errorProvider1.SetError(dtpArribo, "La fecha de arribo no puede ser menor a la fecha de partida.");
             }
@@ -173,48 +177,47 @@ namespace Gestión
                 errorProvider1.Clear();
         }
 
-        private void cbTerminal_Validating(object sender, CancelEventArgs e)
+        private void txtCantParadas_Validating (object sender, CancelEventArgs e)
         {
-            if (cbTerminal.SelectedIndex == -1)
-                errorProvider1.SetError(cbTerminal, "Debe seleccionar una terminal.");
+            int salida = 0;
+            if (!Int32.TryParse(txtCantParadas.Text, out salida))
+                errorProvider1.SetError(txtCantParadas, "Ingrese una cantidad válida.");
             else
                 errorProvider1.Clear();
         }
 
-        private void cbCompañia_Validating(object sender, CancelEventArgs e)
-        {
-            if (cbCompañia.SelectedIndex == -1)
-                errorProvider1.SetError(cbCompañia, "Debe seleccionar una compañía.");
-            else
-                errorProvider1.Clear();
-        }
-
-        private void txtCantParadas_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtCantParadas.Text == "")
-                errorProvider1.SetError(txtCantParadas, "Debe rellenar este campo.");
-            else
-                errorProvider1.Clear();
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click (object sender, EventArgs e)
         {
             try
             {
+                int salida = 0;
+                bool bandera = true;
                 WebService WS = new WebService();
                 objNacionales = new Nacionales();
-                objNacionales.numero = Convert.ToInt32(txtNumero);
-                objNacionales.cantAsientos = Convert.ToInt32(txtCantAsientos.Text);
+                objNacionales.numero = Convert.ToInt32(txtNumero.Text);
                 objNacionales.partida = dtpPartida.Value;
                 objNacionales.arribo = dtpArribo.Value;
                 objNacionales.e = empLogueado;
+
+                if (Int32.TryParse(txtCantAsientos.Text, out salida))
+                {
+                    objNacionales.cantAsientos = salida;
+                    bandera = true;
+                }
+                else
+                {
+                    lblError.Text = "Ingrese una cantidad de asientos válida.";
+                    bandera = false;
+                }
+
                 foreach (Terminal t in listaT)
                 {
-                    if (t.ciudad == cbTerminal.SelectedItem.ToString())
+                    if (t.codigo == cbTerminal.SelectedItem.ToString())
                     {
                         objNacionales.t = t;
                     }
                 }
+
                 foreach (Compania c in listaC)
                 {
                     if (c.nombre == cbCompañia.SelectedItem.ToString())
@@ -222,11 +225,25 @@ namespace Gestión
                         objNacionales.c = c;
                     }
                 }
-                objNacionales.cantAsientos = Convert.ToInt32(txtCantAsientos.Text);
 
-                WS.AltaViaje(objNacionales);
-                lblError.Text = "Alta con éxito.";
-                this.ActivoPorDefecto();
+                if (Int32.TryParse(txtCantParadas.Text, out salida))
+                {
+                    objNacionales.paradas = salida;
+                    bandera = true;
+                }
+                else
+                {
+                    lblError.Text = "Ingrese una cantidad de paradas válida.";
+                    bandera = false;
+                }
+                if (bandera == true)
+                {
+                    WS.AltaViaje(objNacionales);
+
+                    this.ActivoPorDefecto();
+                    lblError.Text = "Alta con éxito.";
+                    errorProvider1.Clear();
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -238,14 +255,16 @@ namespace Gestión
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click (object sender, EventArgs e)
         {
             try
             {
                 WebService WS = new WebService();
                 WS.BajaViaje(objNacionales);
-                lblError.Text = "Baja con éxito.";
+
                 this.ActivoPorDefecto();
+                lblError.Text = "Baja con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -257,23 +276,38 @@ namespace Gestión
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModificar_Click (object sender, EventArgs e)
         {
             try
             {
+                int salida = 0;
+                bool bandera = true;
                 WebService WS = new WebService();
-                objNacionales.numero = Convert.ToInt32(txtNumero);
-                objNacionales.cantAsientos = Convert.ToInt32(txtCantAsientos.Text);
+                objNacionales = new Nacionales();
+                objNacionales.numero = Convert.ToInt32(txtNumero.Text);
                 objNacionales.partida = dtpPartida.Value;
                 objNacionales.arribo = dtpArribo.Value;
                 objNacionales.e = empLogueado;
+
+                if (Int32.TryParse(txtCantAsientos.Text, out salida))
+                {
+                    objNacionales.cantAsientos = salida;
+                    bandera = true;
+                }
+                else
+                {
+                    lblError.Text = "Ingrese una cantidad de asientos válida.";
+                    bandera = false;
+                }
+
                 foreach (Terminal t in listaT)
                 {
-                    if (t.ciudad == cbTerminal.SelectedItem.ToString())
+                    if (t.codigo == cbTerminal.SelectedItem.ToString())
                     {
                         objNacionales.t = t;
                     }
                 }
+
                 foreach (Compania c in listaC)
                 {
                     if (c.nombre == cbCompañia.SelectedItem.ToString())
@@ -281,12 +315,24 @@ namespace Gestión
                         objNacionales.c = c;
                     }
                 }
-                objNacionales.cantAsientos = Convert.ToInt32(txtCantAsientos.Text);
+                if (Int32.TryParse(txtCantParadas.Text, out salida))
+                {
+                    objNacionales.paradas = salida;
+                    bandera = true;
+                }
+                else
+                {
+                    lblError.Text = "Ingrese una cantidad de paradas válida.";
+                    bandera = false;
+                }
+                if (bandera == true)
+                {
+                    WS.ModificarViaje(objNacionales);
 
-                WS.ModificarViaje(objNacionales);
-
-                lblError.Text = "Modificación con éxito.";
-                this.ActivoPorDefecto();
+                    this.ActivoPorDefecto();
+                    lblError.Text = "Modificacion con éxito.";
+                    errorProvider1.Clear();
+                }
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -298,12 +344,12 @@ namespace Gestión
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click (object sender, EventArgs e)
         {
             this.ActivoPorDefecto();
         }
 
-        private void manejoErrorWS(string ex)
+        private void manejoErrorWS (string ex)
         {
             string palabraClave = "ExcepcionEX:";
             string palabraClaveFin = "FinExcepcionEX";
@@ -311,7 +357,7 @@ namespace Gestión
             int posicionFin = ex.IndexOf(palabraClaveFin);
             string errorOriginal = "";
 
-            if (posicion != 0 && posicionFin != 0)
+            if (posicion != -1 && posicionFin != -1)
             {
                 errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
                 lblError.Text = errorOriginal;

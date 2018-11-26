@@ -69,12 +69,13 @@
             this.lblError});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(326, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(370, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblError
             // 
+            this.lblError.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 17);
             // 
@@ -87,7 +88,7 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(326, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(370, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -134,7 +135,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 29);
+            this.label1.Location = new System.Drawing.Point(17, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 2;
@@ -142,16 +143,16 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(140, 29);
+            this.txtNumero.Location = new System.Drawing.Point(153, 49);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(121, 20);
             this.txtNumero.TabIndex = 0;
             this.txtNumero.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumero_Validating);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 62);
+            this.label2.Location = new System.Drawing.Point(17, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 4;
@@ -159,16 +160,16 @@
             // 
             // txtCantAsientos
             // 
-            this.txtCantAsientos.Location = new System.Drawing.Point(152, 62);
+            this.txtCantAsientos.Location = new System.Drawing.Point(153, 85);
             this.txtCantAsientos.Name = "txtCantAsientos";
-            this.txtCantAsientos.Size = new System.Drawing.Size(100, 20);
+            this.txtCantAsientos.Size = new System.Drawing.Size(121, 20);
             this.txtCantAsientos.TabIndex = 1;
             this.txtCantAsientos.Validating += new System.ComponentModel.CancelEventHandler(this.txtCantAsientos_Validating);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 95);
+            this.label3.Location = new System.Drawing.Point(17, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 8;
@@ -177,7 +178,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 150);
+            this.label4.Location = new System.Drawing.Point(17, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 9;
@@ -186,7 +187,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 205);
+            this.label5.Location = new System.Drawing.Point(17, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 10;
@@ -195,7 +196,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 257);
+            this.label6.Location = new System.Drawing.Point(17, 267);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 11;
@@ -204,7 +205,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 307);
+            this.label7.Location = new System.Drawing.Point(17, 329);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 12;
@@ -213,7 +214,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 375);
+            this.label8.Location = new System.Drawing.Point(17, 388);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 13);
             this.label8.TabIndex = 13;
@@ -223,7 +224,7 @@
             // 
             this.dtpPartida.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpPartida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPartida.Location = new System.Drawing.Point(19, 122);
+            this.dtpPartida.Location = new System.Drawing.Point(153, 131);
             this.dtpPartida.Name = "dtpPartida";
             this.dtpPartida.Size = new System.Drawing.Size(200, 20);
             this.dtpPartida.TabIndex = 2;
@@ -233,7 +234,7 @@
             // 
             this.dtpArribo.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpArribo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpArribo.Location = new System.Drawing.Point(16, 167);
+            this.dtpArribo.Location = new System.Drawing.Point(153, 163);
             this.dtpArribo.Name = "dtpArribo";
             this.dtpArribo.Size = new System.Drawing.Size(200, 20);
             this.dtpArribo.TabIndex = 3;
@@ -241,37 +242,35 @@
             // 
             // txtEmpleado
             // 
-            this.txtEmpleado.Location = new System.Drawing.Point(86, 205);
+            this.txtEmpleado.Location = new System.Drawing.Point(153, 205);
             this.txtEmpleado.Name = "txtEmpleado";
             this.txtEmpleado.ReadOnly = true;
-            this.txtEmpleado.Size = new System.Drawing.Size(100, 20);
+            this.txtEmpleado.Size = new System.Drawing.Size(121, 20);
             this.txtEmpleado.TabIndex = 16;
             // 
             // cbTerminal
             // 
             this.cbTerminal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTerminal.FormattingEnabled = true;
-            this.cbTerminal.Location = new System.Drawing.Point(109, 257);
+            this.cbTerminal.Location = new System.Drawing.Point(153, 259);
             this.cbTerminal.Name = "cbTerminal";
             this.cbTerminal.Size = new System.Drawing.Size(121, 21);
             this.cbTerminal.TabIndex = 4;
-            this.cbTerminal.Validating += new System.ComponentModel.CancelEventHandler(this.cbTerminal_Validating);
             // 
             // cbCompañia
             // 
             this.cbCompañia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCompañia.FormattingEnabled = true;
-            this.cbCompañia.Location = new System.Drawing.Point(109, 307);
+            this.cbCompañia.Location = new System.Drawing.Point(153, 321);
             this.cbCompañia.Name = "cbCompañia";
             this.cbCompañia.Size = new System.Drawing.Size(121, 21);
             this.cbCompañia.TabIndex = 5;
-            this.cbCompañia.Validating += new System.ComponentModel.CancelEventHandler(this.cbCompañia_Validating);
             // 
             // txtCantParadas
             // 
-            this.txtCantParadas.Location = new System.Drawing.Point(152, 375);
+            this.txtCantParadas.Location = new System.Drawing.Point(153, 381);
             this.txtCantParadas.Name = "txtCantParadas";
-            this.txtCantParadas.Size = new System.Drawing.Size(100, 20);
+            this.txtCantParadas.Size = new System.Drawing.Size(121, 20);
             this.txtCantParadas.TabIndex = 6;
             this.txtCantParadas.Validating += new System.ComponentModel.CancelEventHandler(this.txtCantParadas_Validating);
             // 
@@ -280,7 +279,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(326, 450);
+            this.ClientSize = new System.Drawing.Size(370, 450);
             this.Controls.Add(this.txtCantParadas);
             this.Controls.Add(this.cbCompañia);
             this.Controls.Add(this.cbTerminal);

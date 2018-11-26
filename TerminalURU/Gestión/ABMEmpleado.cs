@@ -37,6 +37,9 @@ namespace Gestión
             txtCI.Text = "";
             txtNombre.Text = "";
             txtContraseña.Text = "";
+            lblError.Text = "";
+            errorProvider1.Clear();
+            txtCI.Focus();
         }
 
         private void ActivoActualizacion()
@@ -94,10 +97,6 @@ namespace Gestión
             {
                 manejoErrorWS(ex.Message);
             }
-            //catch (Exception ex)
-            //{
-            //    lblError.Text = ex.Message;
-            //}
         }
 
         private void txtContraseña_Validating(object sender, CancelEventArgs e)
@@ -118,8 +117,9 @@ namespace Gestión
                 objEmpleado.contraseña = txtContraseña.Text;
                 objEmpleado.nombreCompleto = txtNombre.Text;
                 WS.AltaEmpleado(objEmpleado);
-
+                ActivoPorDefecto();
                 lblError.Text = "Alta con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -140,8 +140,9 @@ namespace Gestión
                 objEmpleado.contraseña = txtContraseña.Text;
                 objEmpleado.nombreCompleto = txtNombre.Text;
                 WS.ModificarEmpleado(objEmpleado);
-
+                ActivoPorDefecto();
                 lblError.Text = "Modificación con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -177,8 +178,9 @@ namespace Gestión
 
                     empLogueado = null;
                 }
-
+                ActivoPorDefecto();
                 lblError.Text = "Baja con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -203,7 +205,7 @@ namespace Gestión
             int posicionFin = ex.IndexOf(palabraClaveFin);
             string errorOriginal = "";
 
-            if (posicion != 0 && posicionFin != 0)
+            if (posicion != -1 && posicionFin != -1)
             {
                 errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
                 lblError.Text = errorOriginal;

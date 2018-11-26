@@ -45,7 +45,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Ya existe una compañía con ese nombre.");
+                    throw new Exception("ExcepcionEX:Ya existe una compañía con ese nombre.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -116,7 +116,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Error al eliminar la Compañía.");
+                    throw new Exception("ExcepcionEX:Error al eliminar la Compañía.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -151,7 +151,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Error al modificar Compañía.");
+                    throw new Exception("ExcepcionEX:Error al modificar Compañía.FinExcepcionEX");
                 }
             }
             catch (Exception ex)

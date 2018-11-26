@@ -67,7 +67,7 @@ namespace Gestión
             int posicionFin = ex.IndexOf(palabraClaveFin);
             string errorOriginal = "";
 
-            if (posicion != 0 && posicionFin != 0)
+            if (posicion != -1 && posicionFin != -1)
             {
                 errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
                 lblError.Text = errorOriginal;

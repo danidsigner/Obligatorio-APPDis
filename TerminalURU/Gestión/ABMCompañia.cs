@@ -30,6 +30,7 @@ namespace Gestión
             txtTelefono.Text = "";
             errorProvider1.Clear();
             lblError.Text = "";
+            txtNombre.Focus();
         }
 
         private void ActivoActualizacion()
@@ -59,12 +60,6 @@ namespace Gestión
 
         private void ABMCompañia_Load(object sender, EventArgs e)
         {
-            //if (emp == null)
-            //{
-            //    Logueo l = new Logueo();
-            //    this.Close();
-            //    l.Show();
-            //}
             this.ActivoPorDefecto();
         }
 
@@ -114,9 +109,9 @@ namespace Gestión
 
                 WS.AltaCompania(objCompañia);
 
-                lblError.Text = "Alta con éxito.";
-
                 this.ActivoPorDefecto();
+                lblError.Text = "Alta con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -139,9 +134,9 @@ namespace Gestión
 
                 WS.ModificarCompania(objCompañia);
 
-                lblError.Text = "Modificación con éxito.";
-
                 this.ActivoPorDefecto();
+                lblError.Text = "Modificación con éxito.";
+                errorProvider1.Clear();
 
             }
             catch (System.Web.Services.Protocols.SoapException ex)
@@ -161,7 +156,9 @@ namespace Gestión
                 WebService WS = new WebService();
                 WS.BajaCompania(objCompañia);
 
+                ActivoPorDefecto();
                 lblError.Text = "Baja con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -202,7 +199,7 @@ namespace Gestión
             int posicionFin = ex.IndexOf(palabraClaveFin);
             string errorOriginal = "";
 
-            if (posicion != 0 && posicionFin != 0)
+            if (posicion != -1 && posicionFin != -1)
             {
                 errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
                 lblError.Text = errorOriginal;

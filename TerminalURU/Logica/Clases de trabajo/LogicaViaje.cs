@@ -41,7 +41,7 @@ namespace Logica
                         TimeSpan diferencia = viaje.partida.Subtract(v.partida);
                         if (viaje.t.codigo == v.t.codigo && (diferencia.TotalMinutes < 120 && diferencia.TotalMinutes > -120))
                         {
-                            throw new Exception("Deben de haber un minimo de dos horas entre dos viajes con mismo destino");
+                            throw new Exception("ExcepcionEX:Deben de haber un minimo de dos horas entre dos viajes con mismo destino.FinExcepcionEX");
                         }
                     }
 
@@ -56,7 +56,7 @@ namespace Logica
                 }
                 else
                 {
-                    throw new Exception("Fecha de partida o de arribo incorrecta.");
+                    throw new Exception("ExcepcionEX:Fecha de partida o de arribo incorrecta.FinExcepcionEX");
                 }
             }
             catch (Exception)

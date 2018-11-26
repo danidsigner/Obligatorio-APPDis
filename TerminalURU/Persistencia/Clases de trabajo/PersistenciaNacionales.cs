@@ -96,32 +96,32 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Ya existe un viaje con ese número");
+                    throw new Exception("ExcepcionEX:Ya existe un viaje con ese número.FinExcepcionEX");
                 }
 
                 if (r == -2)
                 {
-                    throw new Exception("El empleado ingresado no es correcto");
+                    throw new Exception("ExcepcionEX:El empleado ingresado no es correcto.FinExcepcionEX");
                 }
 
                 if (r == -3)
                 {
-                    throw new Exception("La terminal ingresada no es correcta.");
+                    throw new Exception("ExcepcionEX:La terminal ingresada no es correcta.FinExcepcionEX");
                 }
 
                 if (r == -4)
                 {
-                    throw new Exception("La compañía ingresada no es correcta");
+                    throw new Exception("ExcepcionEX:La compañía ingresada no es correcta.FinExcepcionEX");
                 }
 
                 if (r == -5)
                 {
-                    throw new Exception("No pueden existir viajes con menos de dos horas de diferencia al mismo destino");
+                    throw new Exception("ExcepcionEX:No pueden existir viajes con menos de dos horas de diferencia al mismo destino.FinExcepcionEX");
                 }
 
                 if (r == -6)
                 {
-                    throw new Exception("Error al dar de alta el viaje.");
+                    throw new Exception("ExcepcionEX:Error al dar de alta el viaje.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -154,7 +154,7 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("Error al eliminar el viaje.");
+                    throw new Exception("ExcepcionEX:Error al eliminar el viaje.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -193,32 +193,32 @@ namespace Persistencia
                 int r = Convert.ToInt32(retorno.Value);
                 if (r == -1)
                 {
-                    throw new Exception("No existe un viaje con ese número");
+                    throw new Exception("ExcepcionEX:Ya existe un viaje con ese número.FinExcepcionEX");
                 }
 
                 if (r == -2)
                 {
-                    throw new Exception("El empleado ingresado no es correcto");
+                    throw new Exception("ExcepcionEX:El empleado ingresado no es correcto.FinExcepcionEX");
                 }
 
                 if (r == -3)
                 {
-                    throw new Exception("La terminal ingresada no es correcta.");
+                    throw new Exception("ExcepcionEX:La terminal ingresada no es correcta.FinExcepcionEX");
                 }
 
                 if (r == -4)
                 {
-                    throw new Exception("La compañía ingresada no es correcta");
+                    throw new Exception("ExcepcionEX:La compañía ingresada no es correcta.FinExcepcionEX");
                 }
 
                 if (r == -5)
                 {
-                    throw new Exception("No pueden existir viajes con menos de dos horas de diferencia al mismo destino");
+                    throw new Exception("ExcepcionEX:No pueden existir viajes con menos de dos horas de diferencia al mismo destino.FinExcepcionEX");
                 }
 
                 if (r == -6)
                 {
-                    throw new Exception("Error al modificar el viaje.");
+                    throw new Exception("ExcepcionEX:Error al modificar el viaje.FinExcepcionEX");
                 }
             }
             catch (Exception ex)
@@ -274,7 +274,6 @@ namespace Persistencia
             return lista;
         }
 
-        ////////////////////////////////////////////////////////////////////////
 
         public List<Viajes> ListarNacionalesTodos()
         {

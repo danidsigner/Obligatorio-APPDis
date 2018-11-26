@@ -399,7 +399,7 @@ begin
 		return -3
 	if not exists (select Nombre from Companias where Nombre = @NomCompania and Estado = 1)
 		return -4
-	if exists (select * from Viajes where (DATEDIFF(MINUTE,Partida,@Partida)<120 and CodTerminal = @CodTerminal))
+	if exists (select * from Viajes where (ABS(DATEDIFF(MINUTE,Partida,@Partida))<120 and CodTerminal = @CodTerminal))
 		return -5
 		
 		begin transaction
@@ -485,7 +485,7 @@ begin
 		return -3
 	if not exists (select Nombre from Companias where Nombre = @NomCompania and Estado = 1)
 		return -4
-	if exists (select * from Viajes where (DATEDIFF(MINUTE,Partida,@Partida)<120 and CodTerminal = @CodTerminal))
+	if exists (select * from Viajes where (ABS(DATEDIFF(MINUTE,Partida,@Partida))<120) and (CodTerminal = @CodTerminal and Numero <> @Numero))
 		return -5
 	begin transaction
 	
@@ -743,7 +743,7 @@ go
 exec AltaFacilidad 'ISB','Correo'
 go
 exec AltaFacilidad 'IBA','Telefonia'
-
+go
 
 exec AltaViajeInternacional 100,5,'20190126 10:00 AM','20190129 11:30 AM',46181064,'IAP','EGA',1,'CI vigente'
 go
@@ -793,7 +793,7 @@ go
 exec AltaViajeNacional 210,5,'20190407 1:00 PM','20190407 6:00 PM',53062247,'NMU','Copsa',0
 go
 
-
+select * from Viajes
 
 USE master
 GO

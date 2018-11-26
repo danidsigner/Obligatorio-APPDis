@@ -46,7 +46,7 @@ namespace EntidadesCompartidas
             set
             {
                 value.Trim();
-                if (value.ToString().Length > 7 || value.ToString().Length <= 30)
+                if (value.ToString().Length > 7 && value.ToString().Length <= 30)
                 {
                     for (int i = 0; i < value.Length; i++)
                     {

@@ -38,6 +38,7 @@ namespace Gestión
             txtFacilidad.Text = "";
             txtCodigo.Focus();
             lbFacilidades.Items.Clear();
+            errorProvider1.Clear();
         }
 
         private void ActivoActualizacion ()
@@ -88,8 +89,9 @@ namespace Gestión
             {
                 WS.AltaTerminal(objTerminal);
 
-                lblError.Text = "Alta con éxito.";
                 ActivoPorDefecto();
+                lblError.Text = "Alta con éxito.";
+                errorProvider1.Clear();
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -116,8 +118,10 @@ namespace Gestión
             {
                 WS.ModificarTerminal(objTerminal);
 
-                lblError.Text = "Modificación con éxito.";
                 ActivoPorDefecto();
+                lblError.Text = "Modificación con éxito.";
+                errorProvider1.Clear();
+
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -137,8 +141,10 @@ namespace Gestión
             {
                 WS.BajaTerminal(objTerminal);
 
-                lblError.Text = "Baja con éxito.";
                 ActivoPorDefecto();
+                lblError.Text = "Baja con éxito.";
+                errorProvider1.Clear();
+
             }
             catch (System.Web.Services.Protocols.SoapException ex)
             {
@@ -277,7 +283,7 @@ namespace Gestión
             int posicionFin = ex.IndexOf(palabraClaveFin);
             string errorOriginal = "";
 
-            if (posicion != 0 && posicionFin != 0)
+            if (posicion != -1 && posicionFin != -1)
             {
                 errorOriginal = ex.Substring(posicion + palabraClave.Length, (posicionFin - posicion) - 13);
                 lblError.Text = errorOriginal;
